@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                   Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
                                     builder: (context) => Danca()));
-                }, child: Text("FANDANGOS",
+                }, child: Text("PAU-DE-FITAS",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 25,

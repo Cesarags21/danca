@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
           Center(
             child: Container(
               padding: EdgeInsets.only(top: 5),
-              child: Text("SUL",
+              child: Text("Sul",
                   style: TextStyle(
                     color: Colors.green,
                     fontSize: 40,
@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                   Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
                                     builder: (context) => Danca()));
-                }, child: Text("FANDANGO",
+                }, child: Text("FANDANGOS",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 25,

@@ -131,12 +131,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 )),
 
-                TextButton(onPressed: (){}, child: Text("FANDANGO",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                  ),
-                ))
+                // TextButton(onPressed: (){}, child: Text("FANDANGO",
+                //   style: TextStyle(
+                //     color: Colors.black,
+                //     fontSize: 25,
+                //   ),
+                // ))
                 
               ],
               ),

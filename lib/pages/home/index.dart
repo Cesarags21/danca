@@ -98,13 +98,33 @@ class _HomePageState extends State<HomePage> {
           //),
 
           //paraná
-          Center(
-            child: Container(
+          _buildDancas("Paraná", "PAU-DE-FITAS", Danca()),
+          _danca("FANDANGOS", Danca()),
+
+          //sc
+          _buildDancas("Santa Catarina", "BALAINHA", Danca()),
+          _danca("DANÇA DO VILÃO", Danca()),
+          _danca("BOI DE MAMÃO", Danca()),
+
+          //rs
+          _buildDancas("Rio Grande do Sul", "MILONGA", Danca()),
+          _danca("PEZINHO", Danca()),
+          _danca("CHULA", Danca()),
+
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDancas(estado, danca1, rota){
+    return Container(
+      child: Center(
+        child: Container(
               padding: EdgeInsets.all(15),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(8)),
-                  Text("Paraná",
+                  Text(estado,
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 30,
@@ -114,9 +134,9 @@ class _HomePageState extends State<HomePage> {
                   
                 TextButton(onPressed: (){
                   Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                    builder: (context) => Danca()));
-                }, child: Text("PAU-DE-FITAS",
+                    MaterialPageRoute(
+                      builder: (context) => rota));
+                }, child: Text(danca1,
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 25,
@@ -124,52 +144,6 @@ class _HomePageState extends State<HomePage> {
                 )),
 
 
-                TextButton(onPressed: (){}, child: Text("FANDANGO",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                  ),
-                )),
-
-                // TextButton(onPressed: (){}, child: Text("FANDANGO",
-                //   style: TextStyle(
-                //     color: Colors.black,
-                //     fontSize: 25,
-                //   ),
-                // ))
-                
-              ],
-              ),
-                  
-            ),
-          ),
-
-          //sc
-          Center(
-            child: Container(
-              padding: EdgeInsets.all(15),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(30)),
-                  Text("Santa Catarina",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                  TextButton(onPressed: (){}, child: Text("FANDANGO",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                  ),
-                )),
-                TextButton(onPressed: (){}, child: Text("FANDANGO",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                  ),
-                )),
                 TextButton(onPressed: (){}, child: Text("FANDANGO",
                   style: TextStyle(
                     color: Colors.black,
@@ -181,49 +155,26 @@ class _HomePageState extends State<HomePage> {
               ),
                   
             ),
-          ),
-
-          //rs
-          Center(
-            child: Container(
-              padding: EdgeInsets.all(15),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(30)),
-                  Text("Rio Grande do Sul",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                  TextButton(onPressed: (){}, child: Text("FANDANGO",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                  ),
-                )),
-                TextButton(onPressed: (){}, child: Text("FANDANGO",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                  ),
-                )),
-                TextButton(onPressed: (){}, child: Text("FANDANGO",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                  ),
-                )),
-                
-              ],
-              ),
-                  
-            ),
-          ),
-
-        ],
       ),
     );
   }
+
+  Widget _danca(danca, rota){
+    return Container(
+      child: Center(
+        child: TextButton(onPressed: (){
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(
+            builder: (context) => rota));
+        }, 
+          child: Text(danca,
+            style: TextStyle(              
+            color: Colors.black,
+            fontSize: 25,
+          ),
+        )),
+      ),
+    );
+  }
+
 }

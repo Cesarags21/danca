@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/index.dart';
 
 class Danca extends StatefulWidget {
@@ -18,7 +19,7 @@ class _DancaState extends State<Danca> {
           IconButton(onPressed: (){}, icon: Icon(Icons.more_vert)),
         ],
 
-        backgroundColor: Colors.green[700],
+        backgroundColor: AppColors.primaria01
         
       ),
       body: ListView(

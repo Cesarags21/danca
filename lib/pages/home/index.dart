@@ -123,7 +123,7 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(15),
               child: Column(
                 children: [
-                  Padding(padding: EdgeInsets.all(8)),
+                  Padding(padding: EdgeInsets.all(5)),
                   Text(estado,
                   style: TextStyle(
                     color: Colors.black,
@@ -153,6 +153,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _danca(danca, rota){
     return Container(
+      padding: EdgeInsets.all(5),
       child: Center(
         child: TextButton(onPressed: (){
           Navigator.of(context).pushReplacement(

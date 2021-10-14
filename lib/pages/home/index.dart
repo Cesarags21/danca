@@ -1,5 +1,6 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
+import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/danca/index.dart';
 import 'package:regiao2/pages/inicio/index.dart';
 
@@ -33,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                   height: 50,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: Colors.blue[900],
+                    color: AppColors.primaria02,
                     boxShadow: [
                       BoxShadow(
                       color: Colors.blue,
@@ -98,16 +99,19 @@ class _HomePageState extends State<HomePage> {
           //),
 
           //paraná
-          _buildDancas("Paraná", "PAU-DE-FITAS", Danca()),
+          _buildEstado("Paraná"),
           _danca("FANDANGOS", Danca()),
+          _danca("PAU-DE-FITAS", Danca()),
 
           //sc
-          _buildDancas("Santa Catarina", "BALAINHA", Danca()),
+          _buildEstado("Santa Catarina"),
+          _danca("BALAINHA", Danca()),
           _danca("DANÇA DO VILÃO", Danca()),
           _danca("BOI DE MAMÃO", Danca()),
 
           //rs
-          _buildDancas("Rio Grande do Sul", "MILONGA", Danca()),
+          _buildEstado("Rio Grande do Sul"),
+          _danca("MILONGA", Danca()),
           _danca("PEZINHO", Danca()),
           _danca("CHULA", Danca()),
 
@@ -116,32 +120,24 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _buildDancas(estado, danca1, rota){
+  Widget _buildEstado(estado){
     return Container(
       child: Center(
         child: Container(
+              color: AppColors.primaria03,
+              width: MediaQuery.of(context).size.width,
+              height: 63,
               padding: EdgeInsets.all(15),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(5)),
                   Text(estado,
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
+                    color: AppColors.primaria02,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                  
-                TextButton(onPressed: (){
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (context) => rota));
-                }, child: Text(danca1,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                  ),
-                )),
                 
               ],
               ),
@@ -163,9 +159,11 @@ class _HomePageState extends State<HomePage> {
           child: Text(danca,
             style: TextStyle(              
             color: Colors.black,
-            fontSize: 25,
+            fontSize: 18,
           ),
-        )),
+          )
+        ),
+        
       ),
     );
   }

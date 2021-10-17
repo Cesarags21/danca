@@ -19,18 +19,13 @@ class _HomePageState extends State<HomePage> {
       
       appBar: AppBar( 
         title: Center(child: Text("Danças Típicas")),
-        actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.more_vert)),
-        ],
-
         backgroundColor: Colors.green[700],
-        
       ),
 
       body: ListView(
         children: [
+          //container azul
            Container(
-
                   height: 50,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
@@ -80,18 +75,7 @@ class _HomePageState extends State<HomePage> {
           //Container da imagem: Container(child: AssetImage('assets/images/sul.png'),),
           
          //regiao nome
-          Center(
-            child: Container(
-              padding: EdgeInsets.only(top: 5),
-              child: Text("Sul",
-                  style: TextStyle(
-                    color: Colors.green,
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                  ),
-              ),
-            ),
-          ),
+          _regNome("Sul"),
 
           //container da imagem
           //Container(
@@ -117,6 +101,21 @@ class _HomePageState extends State<HomePage> {
 
         ],
       ),
+    );
+  }
+
+  Widget _regNome(regiao){
+    return Center(
+      child: Container(
+              padding: EdgeInsets.only(top: 5),
+              child: Text(regiao,
+                  style: TextStyle(
+                    color: Colors.green,
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                  ),
+              ),
+            ),
     );
   }
 

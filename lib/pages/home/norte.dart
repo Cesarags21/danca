@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
-import 'package:regiao2/pages/home/index.dart';
+import 'package:regiao2/pages/inicio/index.dart';
 
-class Danca extends StatefulWidget {
-  const Danca({ Key? key }) : super(key: key);
+class NortePage extends StatefulWidget {
+  const NortePage({ Key? key }) : super(key: key);
 
   @override
-  _DancaState createState() => _DancaState();
+  _NortePageState createState() => _NortePageState();
 }
 
-class _DancaState extends State<Danca> {
+class _NortePageState extends State<NortePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar( 
         title: Center(child: Text("Danças Típicas")),
-        backgroundColor: AppColors.primaria01
+        backgroundColor: Colors.green[700],
         
       ),
+
       body: ListView(
         children: [
           Container(
@@ -25,7 +26,7 @@ class _DancaState extends State<Danca> {
                   height: 50,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: Colors.blue[900],
+                    color: AppColors.primaria02,
                     boxShadow: [
                       BoxShadow(
                       color: Colors.blue,
@@ -41,13 +42,13 @@ class _DancaState extends State<Danca> {
                         IconButton(onPressed: () {
                           Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage()));
+                                    builder: (context) => Inicio()));
                         }, 
                           icon: Icon(Icons.arrow_back),
                           iconSize: 30,
                           color: Colors.white,
                         ),
-                        Text("Dança", 
+                        Text("Região", 
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -61,14 +62,9 @@ class _DancaState extends State<Danca> {
                 ),
 
               ),
-        
-          Divider(
-                height: 10,
-                thickness: 0.2,
-                color: Colors.white,
-          ),
         ],
       ),
+
     );
   }
 }

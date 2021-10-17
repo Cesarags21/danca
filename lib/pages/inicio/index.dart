@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:regiao2/pages/home/centroOeste.dart';
 import 'package:regiao2/pages/home/index.dart';
+import 'package:regiao2/pages/home/nordeste.dart';
+import 'package:regiao2/pages/home/norte.dart';
+import 'package:regiao2/pages/home/sudeste.dart';
 
 class Inicio extends StatefulWidget {
   const Inicio({ Key? key }) : super(key: key);
@@ -14,15 +18,12 @@ class _InicioState extends State<Inicio> {
     return Scaffold(
       appBar: AppBar( 
         title: Center(child: Text("Danças Típicas")),
-        actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.more_vert)),
-        ],
-
         backgroundColor: Colors.green[700],
         
       ),
       body: ListView(
         children: [
+          //cabeçalho Danças Típicas e Azul
           Container(
 
                   height: 50,
@@ -55,7 +56,7 @@ class _InicioState extends State<Inicio> {
                   ],
                 ),
 
-              ),
+          ),
         
           Divider(
                 height: 10,
@@ -84,19 +85,35 @@ class _InicioState extends State<Inicio> {
                 color: Colors.white,
           ),
 
-          TextButton(onPressed: (){
-                  Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                    builder: (context) => HomePage()));
-                }, child: Text("SUL",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                  ),
-                )),
+          _regBotao("CENTRO-OESTE", CentroOeste()),
+          _regBotao("NORDESTE", Nordeste()),
+          _regBotao("NORTE", NortePage()),
+          _regBotao("SUDESTE", Sudeste()),
+          _regBotao("SUL", HomePage()),
 
         ],
       ),
     );
   }
+
+  Widget _regBotao(regiao, rota){
+    return TextButton(
+      onPressed: (){
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => rota
+          )
+        );
+      }, 
+      child: Text(
+        regiao,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 25,
+        ),
+      ), 
+    
+    );
+  }
+
 }

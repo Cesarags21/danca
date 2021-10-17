@@ -13,12 +13,13 @@ class _DancaState extends State<Danca> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: Center(child: Text("Danças Picas")),
-          actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
-          ],
-          backgroundColor: AppColors.primaria01),
+
+      appBar: AppBar( 
+        title: Center(child: Text("Danças Típicas")),
+        backgroundColor: AppColors.primaria01
+        
+      ),
+
       body: ListView(
         children: [
           Container(
@@ -56,9 +57,10 @@ class _DancaState extends State<Danca> {
             ),
           ),
           Divider(
-            height: 10,
-            thickness: 0.2,
-            color: Colors.white,
+                height: 10,
+                thickness: 0.2,
+                color: Colors.white,
+
           ),
         ],
       ),

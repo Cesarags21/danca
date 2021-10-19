@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/centroOeste.dart';
 import 'package:regiao2/pages/home/index.dart';
 import 'package:regiao2/pages/home/nordeste.dart';
@@ -18,7 +19,7 @@ class _InicioState extends State<Inicio> {
     return Scaffold(
       appBar: AppBar( 
         title: Center(child: Text("Danças Típicas")),
-        backgroundColor: Colors.green[700],
+        backgroundColor: AppColors.primaria01,
         
       ),
       body: ListView(

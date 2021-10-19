@@ -23,6 +23,45 @@ class _DancaState extends State<Danca> {
       body: ListView(
         children: [
           Container(
+
+          height: 50,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            color: Colors.blue[900],
+            boxShadow: [
+              BoxShadow(
+              color: Colors.blue,
+            ),
+            ]
+          ),
+
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                IconButton(onPressed: () {
+                  Navigator.of(context).pop();
+                }, 
+                  icon: Icon(Icons.arrow_back),
+                  iconSize: 30,
+                  color: Colors.white,
+                ),
+                Text("Dança", 
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+              ],
+            ),
+            
+          ],
+        ),
+
+      ),
+        Container(
             height: 50,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(color: Colors.blue[900], boxShadow: [
@@ -55,15 +94,19 @@ class _DancaState extends State<Danca> {
                 ),
               ],
             ),
-          ),
-          Divider(
-                height: 10,
-                thickness: 0.2,
-                color: Colors.white,
-
-          ),
-        ],
+          
+    
       ),
+
+      Divider(
+            height: 10,
+            thickness: 0.2,
+            color: Colors.white,
+          ),
+
+    ]
+    ),
     );
+
   }
 }

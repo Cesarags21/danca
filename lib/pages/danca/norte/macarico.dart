@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
-import 'package:regiao2/pages/home/index.dart';
+import 'package:regiao2/pages/home/norte.dart';
 
-class Danca extends StatefulWidget {
-  const Danca({Key? key}) : super(key: key);
+class Macarico extends StatefulWidget {
+  const Macarico({ Key? key }) : super(key: key);
 
   @override
-  _DancaState createState() => _DancaState();
+  _MacaricoState createState() => _MacaricoState();
 }
 
-class _DancaState extends State<Danca> {
+class _MacaricoState extends State<Macarico> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar( 
         title: Center(child: Text("Danças Típicas")),
         backgroundColor: AppColors.primaria01
@@ -23,13 +22,15 @@ class _DancaState extends State<Danca> {
       body: ListView(
         children: [
 
-          _dancaFaixa(HomePage()),
+          _dancaFaixa(NortePage()),
 
           Divider(
-                height: 10,
-                thickness: 0.2,
-                color: Colors.white,
-              ),
+            height: 10,
+            thickness: 0.2,
+            color: Colors.white,
+          ),
+
+          _buildDanca("DANÇA DO MAÇARICO")
 
         ]
       ),
@@ -72,5 +73,32 @@ class _DancaState extends State<Danca> {
         ),
       );
     }
+
+  Widget _buildDanca(estado){
+    return Container(
+      child: Center(
+        child: Container(
+              color: AppColors.primaria03,
+              width: MediaQuery.of(context).size.width,
+              height: 63,
+              padding: EdgeInsets.all(15),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(5)),
+                  Text(estado,
+                  style: TextStyle(
+                    color: AppColors.primaria02,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                
+              ],
+              ),
+                  
+            ),
+      ),
+    );
+  }
 
 }

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/danca/index.dart';
+import 'package:regiao2/pages/danca/norte/camaleao.dart';
+import 'package:regiao2/pages/danca/norte/carimbo.dart';
+import 'package:regiao2/pages/danca/norte/desfeiteira.dart';
+import 'package:regiao2/pages/danca/norte/lundu.dart';
+import 'package:regiao2/pages/danca/norte/macarico.dart';
 import 'package:regiao2/pages/inicio/index.dart';
 
 class NortePage extends StatefulWidget {
@@ -42,7 +47,9 @@ class _NortePageState extends State<NortePage> {
               Row(
                 children: [
                   IconButton(onPressed: () {
-                    Navigator.of(context).pop();
+                    Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                                builder: (context) => Inicio()));
                   }, 
                     icon: Icon(Icons.arrow_back),
                     iconSize: 30,
@@ -71,11 +78,11 @@ class _NortePageState extends State<NortePage> {
 
           _regNome("Norte"),
 
-          _dancaBotao("CAMALEÃO", Danca()),
-          _dancaBotao("CARIMBÓ", Danca()),
-          _dancaBotao("DANÇA DO MAÇARICO", Danca()),
-          _dancaBotao("DESFEITEIRA", Danca()),
-          _dancaBotao("LUNDU MARAJOARA", Danca()),
+          _dancaBotao("CAMALEÃO", Camaleao()),
+          _dancaBotao("CARIMBÓ", Carimbo()),
+          _dancaBotao("DANÇA DO MAÇARICO", Macarico()),
+          _dancaBotao("DESFEITEIRA", Desfeiteira()),
+          _dancaBotao("LUNDU MARAJOARA", Lundu()),
 
         ],
       ),

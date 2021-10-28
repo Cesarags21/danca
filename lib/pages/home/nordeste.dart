@@ -127,11 +127,11 @@ class _NordesteState extends State<Nordeste> {
           ),
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(AppColors.primaria03),
-            // shape: MaterialStateProperty.all(
-            //   RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.circular(25),
-            //   )
-            // )
+            shape: MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              )
+            )
           ),
         ),
       ),

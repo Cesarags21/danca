@@ -109,7 +109,7 @@ class _CentroOesteState extends State<CentroOeste> {
     return Padding(
       padding: const EdgeInsets.only(top: 15),
       child: Container(
-        // width: 200,
+        width: 10,
         height: 45,
         child: TextButton(
           onPressed: () {
@@ -127,11 +127,11 @@ class _CentroOesteState extends State<CentroOeste> {
           ),
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(AppColors.primaria03),
-            // shape: MaterialStateProperty.all(
-            //   RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.circular(25),
-            //   )
-            // )
+            shape: MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              )
+            )
           ),
         ),
       ),

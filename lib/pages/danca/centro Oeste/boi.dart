@@ -43,14 +43,7 @@ class _BoiState extends State<Boi> {
             thickness: 0.2,
             color: Colors.white,
           ),
-          Padding(
-            padding:
-                const EdgeInsets.only(top: 30, right: 10, left: 30, bottom: 15),
-            child: Text('Boi à Serra:',
-                style: TextStyle(
-                  fontSize: 30,
-                )),
-          ),
+          _regNome('Boi à Serra'),
 
           /*_buildConteudo("Conheça a dança", 
         "ashufhrghergioerhitgerg" + 
@@ -77,6 +70,7 @@ class _BoiState extends State<Boi> {
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return ListTile(
+                        leading: Icon(Icons.accessibility_new_rounded),
                         title: Text(
                           'Conheça a dança',
                           style: TextStyle(color: Colors.black),
@@ -111,6 +105,7 @@ class _BoiState extends State<Boi> {
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return ListTile(
+                        leading: Icon(Icons.history_edu_rounded),
                         title: Text(
                           'História',
                           style: TextStyle(color: Colors.black),
@@ -144,6 +139,7 @@ class _BoiState extends State<Boi> {
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return ListTile(
+                        leading: Icon(Icons.crop_original_rounded),
                         title: Text(
                           'Vestimentas',
                           style: TextStyle(color: Colors.black),
@@ -177,6 +173,7 @@ class _BoiState extends State<Boi> {
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return ListTile(
+                        leading: Icon(Icons.audiotrack_rounded),
                         title: Text(
                           'Músicas',
                           style: TextStyle(color: Colors.black),
@@ -209,6 +206,7 @@ class _BoiState extends State<Boi> {
                   ExpansionPanel(
                     headerBuilder: (context, isExpanded) {
                       return ListTile(
+                        leading: Icon(Icons.play_arrow_rounded),
                         title: Text(
                           'Aprenda a dançar',
                           style: TextStyle(color: Colors.black),
@@ -301,6 +299,22 @@ class _BoiState extends State<Boi> {
                 ),
               ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _regNome(regiao) {
+    return Center(
+      child: Container(
+        padding: EdgeInsets.only(top: 5),
+        child: Text(
+          regiao,
+          style: TextStyle(
+            color: AppColors.primaria01,
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),

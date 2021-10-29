@@ -24,8 +24,6 @@ class _BoiState extends State<Boi> {
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              /*begin: Alignment.topRight,
-              end: Alignment.bottomLeft,*/
               stops: [
                 0.4,
                 0.8,

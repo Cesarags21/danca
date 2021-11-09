@@ -94,7 +94,7 @@ class _CentroOesteState extends State<CentroOeste> {
   Widget _regNome(regiao) {
     return Center(
       child: Container(
-        padding: EdgeInsets.only(top: 5),
+        padding: EdgeInsets.all(20),
         child: Text(
           regiao,
           style: TextStyle(

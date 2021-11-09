@@ -19,10 +19,26 @@ class _NordesteState extends State<Nordeste> {
    @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( 
-        title: Center(child: Text("Danças Típicas")),
-        backgroundColor: AppColors.primaria01,
+      // appBar: AppBar( 
+      //   title: Center(child: Text("Danças Típicas")),
+      //   backgroundColor: AppColors.primaria01,
         
+      // ),
+      appBar: AppBar(
+        title: Text('Danças Típicas'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              /*begin: Alignment.topRight,
+              end: Alignment.bottomLeft,*/
+              stops: [
+                0.4,
+                0.8,
+              ],
+              colors: <Color>[Color(0xFF008000), Color(0xFFFFD700)],
+            ),
+          ),
+        ),
       ),
 
       body: ListView(
@@ -78,11 +94,12 @@ class _NordesteState extends State<Nordeste> {
 
           _regNome("Nordeste"),
 
-          _dancaBotao("CIRANDA", Ciranda()),
           _dancaBotao("BUMBA MEU BOI", Bumba()),
-          _dancaBotao("XAXADO", Xaxado()),
+          _dancaBotao("CIRANDA", Ciranda()),
           _dancaBotao("COCO", Coco()),
-          _dancaBotao("FREVO", Frevo()),
+          _dancaBotao("FREVO", Frevo()), 
+          _dancaBotao("XAXADO", Xaxado()),
+         
 
         ],
       ),
@@ -93,7 +110,7 @@ class _NordesteState extends State<Nordeste> {
   Widget _regNome(regiao){
     return Center(
       child: Container(
-        padding: EdgeInsets.only(top: 5),
+        padding: EdgeInsets.all(20),
         child: Text(regiao,
             style: TextStyle(
               color: AppColors.primaria01,

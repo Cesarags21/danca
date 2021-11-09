@@ -19,10 +19,26 @@ class _SudesteState extends State<Sudeste> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( 
-        title: Center(child: Text("Danças Típicas")),
-        backgroundColor: AppColors.primaria01,
+      // appBar: AppBar( 
+      //   title: Center(child: Text("Danças Típicas")),
+      //   backgroundColor: AppColors.primaria01,
         
+      // ),
+      appBar: AppBar(
+        title: Text('Danças Típicas'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              /*begin: Alignment.topRight,
+              end: Alignment.bottomLeft,*/
+              stops: [
+                0.4,
+                0.8,
+              ],
+              colors: <Color>[Color(0xFF008000), Color(0xFFFFD700)],
+            ),
+          ),
+        ),
       ),
 
       body: ListView(
@@ -78,12 +94,12 @@ class _SudesteState extends State<Sudeste> {
 
           _regNome("Sudeste"),
 
-          _dancaBotao("SAMBA", Samba()),
-          _dancaBotao("QUADRILHA", Quadrilha()),
           _dancaBotao("DANÇA DO TAMANDUÁ", Tamandua()),
           _dancaBotao("JONGO", Jongo()),
           _dancaBotao("MINEIRO-PAU", Mineiro()),
-
+          _dancaBotao("QUADRILHA", Quadrilha()),
+          _dancaBotao("SAMBA", Samba()),
+          
         ],
       ),
 
@@ -93,7 +109,7 @@ class _SudesteState extends State<Sudeste> {
   Widget _regNome(regiao){
     return Center(
       child: Container(
-        padding: EdgeInsets.only(top: 5),
+        padding: EdgeInsets.all(20),
         child: Text(regiao,
             style: TextStyle(
               color: AppColors.primaria01,
@@ -122,11 +138,11 @@ class _SudesteState extends State<Sudeste> {
             style: TextStyle(
               fontSize: 23,
               fontWeight: FontWeight.w600,
-              color: AppColors.primaria01,
+              color: AppColors.primaria03,
             ),
           ),
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(AppColors.primaria03),
+            backgroundColor: MaterialStateProperty.all(AppColors.primaria01),
             // shape: MaterialStateProperty.all(
             //   RoundedRectangleBorder(
             //     borderRadius: BorderRadius.circular(25),

@@ -19,10 +19,26 @@ class _NortePageState extends State<NortePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( 
-        title: Center(child: Text("Danças Típicas")),
-        backgroundColor: AppColors.primaria01,
+      // appBar: AppBar( 
+      //   title: Center(child: Text("Danças Típicas")),
+      //   backgroundColor: AppColors.primaria01,
         
+      // ),
+      appBar: AppBar(
+        title: Text('Danças Típicas'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              /*begin: Alignment.topRight,
+              end: Alignment.bottomLeft,*/
+              stops: [
+                0.4,
+                0.8,
+              ],
+              colors: <Color>[Color(0xFF008000), Color(0xFFFFD700)],
+            ),
+          ),
+        ),
       ),
 
       body: ListView(
@@ -93,7 +109,7 @@ class _NortePageState extends State<NortePage> {
   Widget _regNome(regiao){
     return Center(
       child: Container(
-        padding: EdgeInsets.only(top: 5),
+        padding: EdgeInsets.all(20),
         child: Text(regiao,
             style: TextStyle(
               color: AppColors.primaria01,
@@ -122,16 +138,16 @@ class _NortePageState extends State<NortePage> {
             style: TextStyle(
               fontSize: 23,
               fontWeight: FontWeight.w600,
-              color: AppColors.primaria01,
+              color: AppColors.corFonte01,
             ),
           ),
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(AppColors.primaria03),
-            // shape: MaterialStateProperty.all(
-            //   RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.circular(25),
-            //   )
-            // )
+            backgroundColor: MaterialStateProperty.all(AppColors.primaria02),
+            shape: MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              )
+            )
           ),
         ),
       ),

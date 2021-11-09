@@ -21,10 +21,26 @@ class _HomePageState extends State<HomePage> {
    @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( 
-        title: Center(child: Text("Danças Típicas")),
-        backgroundColor: AppColors.primaria01,
+      // appBar: AppBar( 
+      //   title: Center(child: Text("Danças Típicas")),
+      //   backgroundColor: AppColors.primaria01,
         
+      // ),
+      appBar: AppBar(
+        title: Text('Danças Típicas'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              /*begin: Alignment.topRight,
+              end: Alignment.bottomLeft,*/
+              stops: [
+                0.4,
+                0.8,
+              ],
+              colors: <Color>[Color(0xFF008000), Color(0xFFFFD700)],
+            ),
+          ),
+        ),
       ),
 
       body: ListView(
@@ -80,10 +96,10 @@ class _HomePageState extends State<HomePage> {
 
           _regNome("Sul"),
 
-          _dancaBotao("FANDANGO", Fandango()),
-          _dancaBotao("PAU-DE-FITAS", Fitas()),
           _dancaBotao("BALAINHA", Balainha()),
           _dancaBotao("DANÇA DO VILÃO", Vilao()),
+          _dancaBotao("FANDANGO", Fandango()),
+          _dancaBotao("PAU-DE-FITAS", Fitas()),
           _dancaBotao("PEZINHO", Pezinho()),
 
         ],
@@ -95,7 +111,7 @@ class _HomePageState extends State<HomePage> {
   Widget _regNome(regiao){
     return Center(
       child: Container(
-        padding: EdgeInsets.only(top: 5),
+        padding: EdgeInsets.all(20),
         child: Text(regiao,
             style: TextStyle(
               color: AppColors.primaria01,

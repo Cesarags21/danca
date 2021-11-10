@@ -94,11 +94,11 @@ class _SudesteState extends State<Sudeste> {
 
           _regNome("Sudeste"),
 
-          _dancaBotao("DANÇA DO TAMANDUÁ", Tamandua()),
-          _dancaBotao("JONGO", Jongo()),
-          _dancaBotao("MINEIRO-PAU", Mineiro()),
-          _dancaBotao("QUADRILHA", Quadrilha()),
-          _dancaBotao("SAMBA", Samba()),
+          _dancaBotao("Dança do Tamanduá", Tamandua(), 1),
+          _dancaBotao("Jongo", Jongo(), 2),
+          _dancaBotao("Mineiro-Pau", Mineiro(), 3),
+          _dancaBotao("Quadrilha", Quadrilha(), 4),
+          _dancaBotao("Samba", Samba(), 5),
           
         ],
       ),
@@ -106,52 +106,84 @@ class _SudesteState extends State<Sudeste> {
     );
   }
 
-  Widget _regNome(regiao){
+  Widget _regNome(regiao) {
     return Center(
       child: Container(
         padding: EdgeInsets.all(20),
-        child: Text(regiao,
-            style: TextStyle(
-              color: AppColors.primaria01,
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-            ),
+        child: Text(
+          regiao,
+          style: TextStyle(
+            color: AppColors.primaria01,
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
   }
 
-  Widget _dancaBotao(danca, rota){
+  Widget _dancaBotao(danca, rota, int idx) {
     return Padding(
-      padding: const EdgeInsets.only(top: 15),
-      child: Container(
-        // width: 200,
-        height: 45,
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                    builder: (context) => rota));
-          },
-          child: Text(
-            danca,
-            style: TextStyle(
-              fontSize: 23,
-              fontWeight: FontWeight.w600,
-              color: AppColors.primaria03,
+      padding: const EdgeInsets.only(left: 5, right: 5, top: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          ClipRRect(
+            child: Stack(
+              children: <Widget>[
+                Positioned.fill(
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: <Color>[
+                          Color(0xFF111111),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    // backgroundColor: Colors.green.shade900,
+                    primary: Colors.white,
+                    //fontweight muda a grosura da letra
+                    //aaaaaaaaaaaaaaaaaaaaaaa
+                    textStyle: const TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => rota),
+                    );
+                  },
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      // child: Text('$idx', style: TextStyle(color: AppColors.corFonte01),),
+                      backgroundColor: AppColors.primaria01,
+                      radius: 15,
+                    ),
+                    title: Text(
+                      danca,
+                      style: TextStyle(fontSize: 20,
+                        color: Colors.black
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(AppColors.primaria01),
-            // shape: MaterialStateProperty.all(
-            //   RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.circular(25),
-            //   )
-            // )
+          Divider(
+            height: 10,
+            thickness: 0.2,
+            color: Colors.black,
           ),
-        ),
+        ],
       ),
-                    
+
+
     );
   }
 

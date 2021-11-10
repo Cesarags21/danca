@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/danca/centro%20Oeste/boi.dart';
@@ -109,7 +111,7 @@ class _CentroOesteState extends State<CentroOeste> {
 
   Widget _dancaBotao(danca, rota, int idx) {
     return Padding(
-      padding: const EdgeInsets.only(right: 15),
+      padding: const EdgeInsets.only(left: 5, right: 5, top: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
@@ -130,6 +132,7 @@ class _CentroOesteState extends State<CentroOeste> {
                 ),
                 TextButton(
                   style: TextButton.styleFrom(
+                    // backgroundColor: Colors.green.shade900,
                     primary: Colors.white,
                     //fontweight muda a grosura da letra
                     //aaaaaaaaaaaaaaaaaaaaaaa
@@ -144,9 +147,16 @@ class _CentroOesteState extends State<CentroOeste> {
                   },
                   child: ListTile(
                     leading: CircleAvatar(
-                      child: Text('$idx'),
+                      // child: Text('$idx', style: TextStyle(color: AppColors.corFonte01),),
+                      backgroundColor: AppColors.primaria02,
+                      radius: 15,
                     ),
-                    title: Text(danca),
+                    title: Text(
+                      danca,
+                      style: TextStyle(fontSize: 20,
+                        color: Colors.black
+                      ),
+                    ),
                   ),
                 ),
               ],

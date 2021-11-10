@@ -100,7 +100,7 @@ class _CentroOesteState extends State<CentroOeste> {
         child: Text(
           regiao,
           style: TextStyle(
-            color: AppColors.primaria01,
+            color: AppColors.primaria02,
             fontSize: 40,
             fontWeight: FontWeight.bold,
           ),
@@ -170,33 +170,7 @@ class _CentroOesteState extends State<CentroOeste> {
         ],
       ),
 
-      /*Container(
-        // width: 200,
-        height: 45,
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                    builder: (context) => rota));
-          },
-          child: Text(
-            danca,
-            style: TextStyle(
-              fontSize: 23,
-              fontWeight: FontWeight.w600,
-              color: AppColors.primaria01,
-            ),
-          ),
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(AppColors.primaria03),
-            // shape: MaterialStateProperty.all(
-            //   RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.circular(25),
-            //   )
-            // )
-          ),
-        ),
-      ),*/
+
     );
   }
 }

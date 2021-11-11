@@ -43,20 +43,6 @@ class _BoiState extends State<Boi> {
           ),
           _regNome('Boi à Serra'),
 
-          /*_buildConteudo("Conheça a dança", 
-        "ashufhrghergioerhitgerg" + 
-        "pjfoprjorpjogktgotkhotkh´hkrhr" + 
-        "opfjojfropgjkrokrg",
-        true
-        ),
-
-        
-        _buildConteudo("História", 
-        "ashufhrghergioerhitgerg" + 
-        "pjfoprjorpjogktgotkhotkh´hkrhr" + 
-        "opfjojfropgjkrokrg",
-        true
-        ),*/
 
           Column(children: [
             Container(
@@ -310,7 +296,7 @@ class _BoiState extends State<Boi> {
         child: Text(
           regiao,
           style: TextStyle(
-            color: AppColors.primaria01,
+            color: AppColors.primaria02,
             fontSize: 40,
             fontWeight: FontWeight.bold,
           ),
@@ -352,4 +338,6 @@ class _BoiState extends State<Boi> {
       ),
     ]);
   }
+
+
 }

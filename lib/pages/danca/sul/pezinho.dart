@@ -215,14 +215,14 @@ class _PezinhoState extends State<Pezinho> {
               ),
             ),
           ]),
-          Column(children: [
-            new Image.asset(
-              'images/boi.jpg',
-              width: 370.0,
-              height: 180.0,
-              fit: BoxFit.cover,
-            )
-          ]),
+          // Column(children: [
+          //   new Image.asset(
+          //     'images/boi.jpg',
+          //     width: 370.0,
+          //     height: 180.0,
+          //     fit: BoxFit.cover,
+          //   )
+          // ]),
         ],
       ),
     );
@@ -298,7 +298,7 @@ class _PezinhoState extends State<Pezinho> {
         child: Text(
           regiao,
           style: TextStyle(
-            color: AppColors.primaria02,
+            color: AppColors.primaria06,
             fontSize: 40,
             fontWeight: FontWeight.bold,
           ),

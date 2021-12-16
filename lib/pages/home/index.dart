@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
           _regNome("Sul"),
 
           _dancaBotao("Balainha", Balainha(), 1),
-          _dancaBotao(" Fandango ", Fandango(), 2),
+          _dancaBotao("Fandango ", Fandango(), 2),
           _dancaBotao("Pau de fitas", Fitas(), 3),
           _dancaBotao("Pezinho", Pezinho(), 4),
           _dancaBotao("Dança do Vilão", Vilao(), 5),

@@ -95,7 +95,7 @@ class _InicioState extends State<Inicio> {
 
           _regBotao("    Nordeste   ", Nordeste()),
 
-          _regBotao("       Norte       ", NortePage()),
+          _regBotao("       Norte       ", Norte()),
 
           _regBotao("    Sudeste     ", Sudeste()),
 

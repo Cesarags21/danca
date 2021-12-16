@@ -88,7 +88,7 @@ class _NorteState extends State<Norte> {
           _regNome("Norte"),
 
           _dancaBotao("Camaleão", Camaleao(), 1),
-          _dancaBotao(" Carimbó ", Carimbo(), 2),
+          _dancaBotao("Carimbó ", Carimbo(), 2),
           _dancaBotao("Desfeiteira", Desfeiteira(), 3),
           _dancaBotao("Lundu", Lundu(), 4),
           _dancaBotao("Maçarico", Macarico(), 5),

@@ -216,14 +216,14 @@ class _FandangoState extends State<Fandango> {
               ),
             ),
           ]),
-          Column(children: [
-            new Image.asset(
-              'images/boi.jpg',
-              width: 370.0,
-              height: 180.0,
-              fit: BoxFit.cover,
-            )
-          ]),
+          // Column(children: [
+          //   new Image.asset(
+          //     'images/boi.jpg',
+          //     width: 370.0,
+          //     height: 180.0,
+          //     fit: BoxFit.cover,
+          //   )
+          // ]),
         ],
       ),
     );
@@ -299,7 +299,7 @@ class _FandangoState extends State<Fandango> {
         child: Text(
           regiao,
           style: TextStyle(
-            color: AppColors.primaria02,
+            color: AppColors.primaria06,
             fontSize: 40,
             fontWeight: FontWeight.bold,
           ),

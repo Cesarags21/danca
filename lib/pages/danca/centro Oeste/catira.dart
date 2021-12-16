@@ -218,14 +218,14 @@ class _CatiraState extends State<Catira> {
               ),
             ),
           ]),
-          Column(children: [
-            new Image.asset(
-              'images/boi.jpg',
-              width: 370.0,
-              height: 180.0,
-              fit: BoxFit.cover,
-            )
-          ]),
+          // Column(children: [
+          //   new Image.asset(
+          //     'images/boi.jpg',
+          //     width: 370.0,
+          //     height: 180.0,
+          //     fit: BoxFit.cover,
+          //   )
+          // ]),
         ],
       ),
     );

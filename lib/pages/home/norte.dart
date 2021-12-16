@@ -8,21 +8,21 @@ import 'package:regiao2/pages/danca/norte/lundu.dart';
 import 'package:regiao2/pages/danca/norte/macarico.dart';
 import 'package:regiao2/pages/inicio/index.dart';
 
-class NortePage extends StatefulWidget {
-  const NortePage({ Key? key }) : super(key: key);
+class Norte extends StatefulWidget {
+  const Norte({Key? key}) : super(key: key);
 
   @override
-  _NortePageState createState() => _NortePageState();
+  _NorteState createState() => _NorteState();
 }
 
-class _NortePageState extends State<NortePage> {
+class _NorteState extends State<Norte> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar( 
+      // appBar: AppBar(
       //   title: Center(child: Text("Danças Típicas")),
       //   backgroundColor: AppColors.primaria01,
-        
+
       // ),
       appBar: AppBar(
         title: Text('Danças Típicas'),
@@ -45,45 +45,38 @@ class _NortePageState extends State<NortePage> {
         children: [
           //container azul
           Container(
-
             height: 50,
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              color: AppColors.primaria02,
-              boxShadow: [
-                BoxShadow(
+            decoration: BoxDecoration(color: AppColors.primaria02, boxShadow: [
+              BoxShadow(
                 color: Colors.blue,
               ),
-              ]
-            ),
-
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  IconButton(onPressed: () {
-                    Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                                builder: (context) => Inicio()));
-                  }, 
-                    icon: Icon(Icons.arrow_back),
-                    iconSize: 30,
-                    color: Colors.white,
-                  ),
-                  Text("Região", 
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold
-                  ),
+            ]),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context) => Inicio()));
+                      },
+                      icon: Icon(Icons.arrow_back),
+                      iconSize: 30,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      "Região",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
-                ],
-              ),
-              
-            ],
-          ),
-
+              ],
+            ),
           ),
 
           Divider(
@@ -94,65 +87,90 @@ class _NortePageState extends State<NortePage> {
 
           _regNome("Norte"),
 
-          _dancaBotao("CAMALEÃO", Camaleao()),
-          _dancaBotao("CARIMBÓ", Carimbo()),
-          _dancaBotao("DANÇA DO MAÇARICO", Macarico()),
-          _dancaBotao("DESFEITEIRA", Desfeiteira()),
-          _dancaBotao("LUNDU MARAJOARA", Lundu()),
-
+          _dancaBotao("Camaleão", Camaleao(), 1),
+          _dancaBotao(" Carimbó ", Carimbo(), 2),
+          _dancaBotao("Desfeiteira", Desfeiteira(), 3),
+          _dancaBotao("Lundu", Lundu(), 4),
+          _dancaBotao("Maçarico", Macarico(), 5),
         ],
       ),
-
     );
   }
 
-  Widget _regNome(regiao){
+  Widget _regNome(regiao) {
     return Center(
       child: Container(
         padding: EdgeInsets.all(20),
-        child: Text(regiao,
-            style: TextStyle(
-              color: AppColors.primaria01,
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-            ),
+        child: Text(
+          regiao,
+          style: TextStyle(
+            color: AppColors.primaria05,
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
   }
 
-  Widget _dancaBotao(danca, rota){
+  Widget _dancaBotao(danca, rota, int idx) {
     return Padding(
-      padding: const EdgeInsets.only(top: 15),
-      child: Container(
-        // width: 200,
-        height: 45,
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                    builder: (context) => rota));
-          },
-          child: Text(
-            danca,
-            style: TextStyle(
-              fontSize: 23,
-              fontWeight: FontWeight.w600,
-              color: AppColors.corFonte01,
+      padding: const EdgeInsets.only(left: 5, right: 5, top: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          ClipRRect(
+            child: Stack(
+              children: <Widget>[
+                Positioned.fill(
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: <Color>[
+                          Color(0xFFDC143C),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    // backgroundColor: Colors.green.shade900,
+                    primary: Colors.white,
+                    //fontweight muda a grosura da letra
+                    //aaaaaaaaaaaaaaaaaaaaaaa
+                    textStyle: const TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => rota),
+                    );
+                  },
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      // child: Text('$idx', style: TextStyle(color: AppColors.corFonte01),),
+                      backgroundColor: AppColors.primaria05,
+                      radius: 15,
+                    ),
+                    title: Text(
+                      danca,
+                      style: TextStyle(fontSize: 20, color: Colors.black),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(AppColors.primaria02),
-            shape: MaterialStateProperty.all(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25),
-              )
-            )
+          Divider(
+            height: 10,
+            thickness: 0.2,
+            color: Colors.black,
           ),
-        ),
+        ],
       ),
-                    
     );
   }
-
 }

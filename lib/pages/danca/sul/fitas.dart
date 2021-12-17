@@ -61,9 +61,7 @@ class _FitasState extends State<Fitas> {
                     },
                     body: ListTile(
                       title: Text(
-                          ' https://www.youtube.com/watch?v=zQiTmurnsjI\n' +
-                              '   https://www.youtube.com/watch?v=_NBgSokCgC4 \n' +
-                              ' https://www.youtube.com/watch?v=i8NT_Dl8ajI',
+                          'A Dança da Fita é conduzida por um par guia o qual faz parte o Mestre Leão, que é um dos personagens da dança e a Senhora Dona Mestra, outra parte importante da dança. Antes de iniciarem a dança, o trovador pede ao dono da casa, que lhe dê a licença para dançarem o “Pau de fitas” em seu terreiro (casa). Este modo foi como a dança se desenvolveu entre os gaúchos, porém cada região fez suas modificações, com detalhes peculiares. Para a dança ser realizada é utilizado um mastro de aproximadamente três metros, com o diâmetro de quatro centímetros, que será segurado por alguém ao centro, em sua ponta são penduradas fitas coloridas de mais ou menos quatro metros de comprimento e de um a dois centímetros de largura, que serão utilizadas para as evoluções da dança. Os dançarinos se dispõem em círculos cada um com suas respectivas fitas onde irão fazer os movimentos trançando-as.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

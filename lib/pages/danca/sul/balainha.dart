@@ -61,9 +61,7 @@ class _BalainhaState extends State<Balainha> {
                     },
                     body: ListTile(
                       title: Text(
-                          'https://www.youtube.com/watch?v=mAp6UKuRuUk\n' +
-                              ' https://www.youtube.com/watch?v=9290aNaOhUI\n' +
-                              'https://www.youtube.com/watch?v=VXjFxKWIotE',
+                          'A balainha é uma dança da região litorânea dos Estados do Paraná e de Santa Catarina. É citada com o nome dança-do-balainho, sem descrição, pelo folclorista Rossini Tavares de Lima. Conhecida também com o nome de "arcos floridos" ou "jardineira", é desenvolvida com os pares de dançantes, cada um deles, sustentando um arco florido. No início, os pares em fileiras fazem movimento ondulante passando, ora por cima, ora por baixo dos arcos dos demais pares; formam depois grupos de quatro pares que, em círculo, intercruzam seus arcos no alto, armando assim as “balainhas”. Ao final desmancham as “balainhas” e retornam à posição inicial, com movimentos sincronizados e sequenciais.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

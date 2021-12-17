@@ -66,11 +66,7 @@ class _JongoState extends State<Jongo> {
                     },
                     body: ListTile(
                       title: Text(
-                      "https://www.youtube.com/watch?v=OiujQ_T8nAs \n" +
-                      "\n"+
-                      "https://www.youtube.com/watch?v=jpRhX7uHILQ \n" +
-                      "\n"+
-                      "https://www.youtube.com/watch?v=QpXEkxO2xiI",
+                      "Dança de negros organizados em roda mista, alternando-se homens e mulheres. No centro um solista, um jongueiro, que canta sua canção, o “ponto”. Os demais respondem em coro, fazendo movimentos laterais e batendo palmas nos lugares. O solista improvisa passos movimentando todo o corpo. O instrumental é composto por dois tambores – um grande, o Tambu, e um menor, o Candongueiro; uma Puita – cuica, artesanal; um chocalho – o Guaiá, feito de folha-se-flandres. As melodias são construídas com o uso de poucos sons. A dificuldade reside no texto literário dos “pontos”, pois são todos enigmáticos, metafóricos. Quando o solista quer desafiar alguém, canta o “ponto da demanda”; este deverá decifrá-lo, cantando a resposta: diz-se então que “desatou o ponto”. Se não for decifrado, diz-se que “ficou amarrado”. Neste caso, o jongueiro “amarrado” pode passar por várias situações humilhantes e vexatórias, como cair no chão e não conseguir se levantar, não conseguir andar, etc. O jongo é, ainda hoje, bastante praticado em diversas cidades de sua região original: o Vale do Paraíba na Região Sudeste do Brasil, ao sul do estado do Rio de Janeiro e ao norte do estado de São Paulo e na região das Minas e das fazendas de café em Minas Gerais, onde também é chamado ""Caxambu"".",
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

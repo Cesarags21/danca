@@ -41,7 +41,7 @@ class _SiririState extends State<Siriri> {
             thickness: 0.2,
             color: Colors.white,
           ),
-          _regNome('São Gonçalo'),
+          _regNome('Siriri'),
           Column(children: [
             Container(
               margin: EdgeInsets.all(10),

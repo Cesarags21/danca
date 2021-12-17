@@ -61,8 +61,7 @@ class _PezinhoState extends State<Pezinho> {
                     },
                     body: ListTile(
                       title: Text(
-                          ' https://www.youtube.com/watch?v=ZZQT9Ry6-j0\n' +
-                              '   https://www.youtube.com/watch?v=ZCue0SKuUrI',
+                          'Pezinho é uma das danças gaúchas mais singelas e simples, que encantam a quem vê. Popular na região dos Açores, adaptou-se no Rio Grande do Sul de modo a ser realizada da seguinte forma: primeiro há uma marcação de pés. Depois, duplas de dançarinos cruzam os braços e giram em redor de si mesmos. É a única dança gaúcha em que todos os dançarinos realmente dançam, não ficando limitados a executar a coreografia proposta.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

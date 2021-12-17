@@ -61,9 +61,7 @@ class _FandangoState extends State<Fandango> {
                     },
                     body: ListTile(
                       title: Text(
-                          ' https://www.youtube.com/watch?v=N02VRy3MBGE\n' +
-                              '  https://www.youtube.com/watch?v=ho2T4JiZFIs\n' +
-                              ' https://www.youtube.com/watch?v=3eg-vDlkxXc',
+                          'Fandango é um estilo musical caracterizado pela sua dança, com movimentos frenéticos, animados e exibicionistas, marcado principalmente pelo sapateado. A dança do fandango é acompanhada predominantemente por violas e outros instrumentos de corda. O ritmo da melodia, no entanto, pode ser dramático ou agitado. As pessoas que participam do fandango são conhecidas por fandangueiros e, de acordo com a história da origem deste gênero musical, a dança do fandango era o que animava as principais festas religiosas, os batizados, casamentos, e o carnaval, por exemplo.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

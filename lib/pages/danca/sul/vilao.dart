@@ -61,9 +61,7 @@ class _VilaoState extends State<Vilao> {
                     },
                     body: ListTile(
                       title: Text(
-                          ' https://www.youtube.com/watch?v=GsFCNCFre18\n' +
-                              '    https://www.youtube.com/watch?v=LLkLBfvi0S8\n' +
-                              'https://www.youtube.com/watch?v=KB-fKTIYbec',
+                          'A dança do Vilão é uma Dança de conjunto cujos participantes se subdividem pela função: batedores, balizadores, músicos, regente e chefe do grupo. Os batedores, portando bastões de madeira e organizados em semicírculo, realizam batidas nos bastões do parceiro, ao ritmo da marcação do regente e da execução musical da banda. Há movimentos que compreendem giros de corpo, volteios dos bastões, troca de lugares, encerrando-se com uma seqüência de sete outros gestos rapidíssimos, chamados "cerradinhos", que constam de batidas realizadas com os batedores agachados.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

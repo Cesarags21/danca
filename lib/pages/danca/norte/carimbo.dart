@@ -41,7 +41,7 @@ class _CarimboState extends State<Carimbo> {
             thickness: 0.2,
             color: Colors.white,
           ),
-          _regNome('Carimbo'),
+          _regNome('Carimbó'),
           Column(children: [
             Container(
               margin: EdgeInsets.all(10),
@@ -294,7 +294,7 @@ class _CarimboState extends State<Carimbo> {
         child: Text(
           regiao,
           style: TextStyle(
-            color: AppColors.primaria02,
+            color: AppColors.primaria05,
             fontSize: 40,
             fontWeight: FontWeight.bold,
           ),

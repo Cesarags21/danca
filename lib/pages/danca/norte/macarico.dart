@@ -295,7 +295,7 @@ class _MacaricoState extends State<Macarico> {
         child: Text(
           regiao,
           style: TextStyle(
-            color: AppColors.primaria02,
+            color: AppColors.primaria05,
             fontSize: 40,
             fontWeight: FontWeight.bold,
           ),

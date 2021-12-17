@@ -67,9 +67,7 @@ class _MineiroState extends State<Mineiro> {
                     },
                     body: ListTile(
                       title: Text(
-                      "https://www.youtube.com/watch?v=ENhdjQHBeTI \n" +
-                      '\n' + 
-                      "https://www.youtube.com/watch?v=MzaZZ7rOM3E",
+                      "Dança executada por homens, adultos e crianças, cada um levando um ou dois bastões de madeira. Desenvolvida em círculo ou em fileiras que se defrontam, os dançarinos, voltados de frente para o seu par, realizam uma coreografia totalmente marcada pelas batidas dos bastões no chão. Sempre em compasso quaternário, o tempo forte musical é marcado com batida dos bastões no chão. A variedade na forma de bater os restantes três tempos é que dá nomes específicos às partes: “Batida de três”, “Batida de quatro”, “Batida cruzada”, “Batida no alto”, “Batida embaixo” etc. Muitos grupos têm como parte integrante o Boi Pintadinho (RJ) ou o Boi-lé (MG), com seus principais personagens: a Mulinha, o Jaguará, o Boi, os Cabeções.",
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

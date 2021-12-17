@@ -41,7 +41,7 @@ class _PezinhoState extends State<Pezinho> {
             thickness: 0.2,
             color: Colors.white,
           ),
-          _regNome('Pau de Fitas'),
+          _regNome('Pezinho'),
           Column(children: [
             Container(
               margin: EdgeInsets.all(10),

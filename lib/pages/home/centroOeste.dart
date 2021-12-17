@@ -81,7 +81,7 @@ class _CentroOesteState extends State<CentroOeste> {
             color: Colors.white,
           ),
 
-          _regNome("Centro Oeste"),
+          _regNome("Centro-Oeste"),
 
           _dancaBotao("Boi à Serra", Boi(), 1),
           _dancaBotao("Catira", Catira(), 2),

@@ -65,11 +65,7 @@ class _SambaState extends State<Samba> {
                       );
                     },
                     body: ListTile(
-                      title: Text("https://www.youtube.com/watch?v=4DZ00HB5ZV0 \n" +
-                                  "\n" +
-                                  "https://www.youtube.com/watch?v=Tjh1wq24kTk \n" + 
-                                  "\n" +
-                                  "https://www.youtube.com/watch?v=4glVJKfs1Zg",
+                      title: Text("O samba é uma forma de dança originária do Brasil. É ligada ao ritmo musical de mesmo nome, e muito praticada por passistas de escolas de samba e em pagodes.",
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

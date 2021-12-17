@@ -297,7 +297,7 @@ class _XaxadoState extends State<Xaxado> {
         child: Text(
           regiao,
           style: TextStyle(
-            color: AppColors.primaria02,
+            color: AppColors.primaria04,
             fontSize: 40,
             fontWeight: FontWeight.bold,
           ),

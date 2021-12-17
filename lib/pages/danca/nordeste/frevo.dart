@@ -297,7 +297,7 @@ class _FrevoState extends State<Frevo> {
         child: Text(
           regiao,
           style: TextStyle(
-            color: AppColors.primaria02,
+            color: AppColors.primaria04,
             fontSize: 40,
             fontWeight: FontWeight.bold,
           ),

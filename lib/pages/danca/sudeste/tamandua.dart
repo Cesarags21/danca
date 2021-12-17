@@ -65,7 +65,7 @@ class _TamanduaState extends State<Tamandua> {
                       );
                     },
                     body: ListTile(
-                      title: Text("https://www.youtube.com/watch?v=uJQ9hEZkx8Y",
+                      title: Text("Organizada em roda de homens e mulheres, um solista ao centro vai executando movimentos determinados pela letra da cantoria: pondo a mão na cabeça ou na cintura, batendo com o pé no chão, pulando para lá e para cá, mexendo com as cadeiras etc. As músicas são na forma solo-coro, o que permite improvisação nas ordens musicais cantadas pelo puxador.",
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

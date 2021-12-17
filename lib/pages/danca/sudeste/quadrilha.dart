@@ -64,9 +64,7 @@ class _QuadrilhaState extends State<Quadrilha> {
                       );
                     },
                     body: ListTile(
-                      title: Text("https://www.youtube.com/watch?v=Q45AKyWxuY8 \n" +
-                      "\n" +
-                                  "https://www.youtube.com/watch?v=Lfk-bF-PBZY",
+                      title: Text("A quadrilha, também chamada de quadrilha junina, quadrilha caipira ou quadrilha matuta, é um estilo de dança folclórica coletiva muito popular no Brasil. Essa dança de teor caipira é típica das festas juninas, que geralmente acontecem nos meses de junho e julho em todas as regiões do país. Por ser uma dança caipira, sua linguagem se aproxima da coloquial e dos meios sertanejos e nordestinos.",
 
                           style: TextStyle(color: Colors.black)),
                     ),

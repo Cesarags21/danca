@@ -61,9 +61,7 @@ class _CatiraState extends State<Catira> {
                     },
                     body: ListTile(
                       title: Text(
-                          'https://www.youtube.com/watch?v=YWAluRu8Jfo\n' +
-                              'https://www.youtube.com/watch?v=kNTYVLs5ydE\n' +
-                              'https://www.youtube.com/watch?v=S09RejvYeUQ',
+                          'A Catira, também chamada de Cateretê, é uma dança coletiva e popular do folclore brasileiro. Note que essa manifestação cultural é mais encontrada nas cidades interioranas e, portanto, faz parte da cultura sertaneja. Essa dança folclórica é marcada pela batida dos pés e das mãos movimentadas pelo ritmo da música, que por sua vez, é produzida pela viola caipira. Por esse motivo, a moda de viola é o ritmo mais empregado. Duas fileiras são formadas pelos integrantes, que se movimentam de frente um para o outro. Dessa maneira, as batidas dos pés e das mãos são intercaladas por pulos.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

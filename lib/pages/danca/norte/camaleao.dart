@@ -94,7 +94,7 @@ class _CamaleaoState extends State<Camaleao> {
                       );
                     },
                     body: ListTile(
-                      title: Text('César preguiçoso não fez',
+                      title: Text('Não há :(',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded1,
@@ -196,7 +196,8 @@ class _CamaleaoState extends State<Camaleao> {
                       );
                     },
                     body: ListTile(
-                      title: Text('César baiano demais',
+                      title: Text('https://www.youtube.com/watch?v=NoI3lx_LkQU\n' +
+                              'https://www.youtube.com/watch?v=O58Mw0hVcRQ',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded4,

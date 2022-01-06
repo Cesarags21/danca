@@ -61,8 +61,7 @@ class _ChupimState extends State<Chupim> {
                     },
                     body: ListTile(
                       title: Text(
-                          'https://www.youtube.com/watch?v=fZZl478nClA\n' +
-                              'https://www.youtube.com/watch?v=MxLc_dHJhos\n',
+                          'O chupim é uma famosa dança típica da região centro-oeste do Brasil. Ela tem esse nome por conta do pássaro homônimo, pois seus dançarinos realizam movimentos que lembram as batidas de asas do mesmo. Os homens vestem camisas e calças longas, e as mulheres vão de saia longa. Entretanto, as vestimentas apresentam cores discretas e sem o tradicional colorido, diferenciando-se da maioria das danças típicas da região Centro Oeste do Brasil.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

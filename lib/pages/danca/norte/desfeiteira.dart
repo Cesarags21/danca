@@ -127,7 +127,7 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                       );
                     },
                     body: ListTile(
-                      title: Text(':(', style: TextStyle(color: Colors.black)),
+                      title: Text('Não há :(', style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -192,7 +192,7 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                       );
                     },
                     body: ListTile(
-                      title: Text('Tem não',
+                      title: Text('https://www.youtube.com/watch?v=xT-8qi0eiM8',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded4,

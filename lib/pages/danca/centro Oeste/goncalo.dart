@@ -61,8 +61,7 @@ class _GoncaloState extends State<Goncalo> {
                     },
                     body: ListTile(
                       title: Text(
-                          'https://www.youtube.com/watch?v=_g1lqnjHQ2Q\n' +
-                              'https://www.youtube.com/watch?v=STrQnSYBWuI\n',
+                          'A dança de São Gonçalo hoje é organizada em pagamento de promessa devida a São Gonçalo. O promesseiro é quem organiza a função, administrando todo o processo necessário à realização deste ritual. É realizada dentro de casa ou em local coberto, onde se arma um altar com a imagem deste santo e outros de devoção do promesseiro. Em frente a este altar é que se desenvolve toda a dança. Os dançarinos se organizam em duas fileiras, uma de homens e outra de mulheres, voltadas para o altar. Cada fileira é encabeçada por dois violeiros, mestre e contramestre, que dirigem todo o rito. A dança é dividida em partes chamadas “volta”, cujo número varia entre 5, 7, 9 e 21. Entre cada “volta” há interrupção e todos aproveitam para se servir das iguarias oferecidas pelo promesseiro. As “voltas” são desenvolvidas com os violeiros cantando, a duas vozes, loas a São Gonçalo, enquanto dançarinos, sapateando na fileira em ritmo sincopado, dirigem-se em dupla até o altar, beijam o santo, fazem genuflexão e saem sem dar as costas para o altar, ocupando os últimos lugares de suas fileiras.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

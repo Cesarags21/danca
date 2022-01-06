@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/centroOeste.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 class Boi extends StatefulWidget {
   const Boi({Key? key}) : super(key: key);
@@ -63,8 +64,7 @@ class _BoiState extends State<Boi> {
                     },
                     body: ListTile(
                       title: Text(
-                          'https://www.youtube.com/watch?v=OvDt_SZN4y8\n' +
-                              'https://www.youtube.com/watch?v=mcvfH9HHhr0',
+                          'A dança Boi-à-Serra é uma manifestação do carnaval matogrossense. O boi, principal personagem, é feito da seguinte forma: primeiro monta-se uma estrutura de madeira leve e flexível conhecida como "melado de pomba"; depois, cobrem essa estrutura com um cobertor tipo "seca-poço", formando o corpo do boi, de cor semelhante à cor do animal; a cabeça do boi da brincadeira é a própria caveira do animal, seca, que é pintada com uma tinta escura, recebendo ainda algo para representar os olhos do boi, que pode ser dois botões, um de cada lado. Atualmente, algumas pessoas confeccionam o Boi-à-serra assemelhando-o ao Bumba-meu-boi de estados nordestinos do Brasil, cobrindo a mesma estrutura de madeira e a caveira do boi com tecido estampado. Uma pessoa vai dentro do boi, dançando ao carregá-lo, dando vida ao brinquedo, que avança em direção à platéia, como se fosse "chifrar" os presentes. Outros personagens, não menos interessantes, são: a cabeça de apá, a mãe do morro, o tuiuiú, a ema, o morcego, o cavalo sem cabeça; esses, são variáveis, de um a outro grupo.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,
@@ -132,11 +132,21 @@ class _BoiState extends State<Boi> {
                     },
                     body: ListTile(
                       title: Text(
-                          'O boi, principal personagem, é feito da seguinte forma: primeiro monta-se uma estrutura de madeira leve e flexível conhecida como "melado de pomba"; depois, cobrem essa estrutura com um cobertor tipo "seca-poço", formando o corpo do boi, de cor semelhante à cor do animal; a cabeça do boi da brincadeira é a própria caveira do animal, seca, que é pintada com uma tinta escura, recebendo ainda algo para representar os olhos do boi, que pode ser dois botões, um de cada lado. Atualmente, algumas pessoas confeccionam o Boi-à-serra assemelhando-o ao Bumba-meu-boi de estados nordestinos do Brasil, cobrindo a mesma estrutura de madeira e a caveira do boi com tecido estampado. Uma pessoa vai dentro do boi, dançando ao carregá-lo, dando vida ao brinquedo, que avança em direção à platéia, como se fosse "chifrar" os presentes. Outros personagens, não menos interessantes, são: a cabeça de apá, a mãe do morro, o tuiuiú, a ema, o morcego, o cavalo sem cabeça; esses, são variáveis, de um a outro grupo. ',
+                          'O boi, principal personagem, é feito da seguinte forma: primeiro monta-se uma estrutura de madeira leve e flexível conhecida como "melado de pomba"; depois, cobrem essa estrutura com um cobertor tipo "seca-poço", formando o corpo do boi, de cor semelhante à cor do animal; a cabeça do boi da brincadeira é a própria caveira do animal, seca, que é pintada com uma tinta escura, recebendo ainda algo para representar os olhos do boi, que pode ser dois botões, um de cada lado. Atualmente, algumas pessoas confeccionam o Boi-à-serra assemelhando-o ao Bumba-meu-boi de estados nordestinos do Brasil, cobrindo a mesma estrutura de madeira e a caveira do boi com tecido estampado. Uma pessoa vai dentro do boi, dançando ao carregá-lo, dando vida ao brinquedo, que avança em direção à platéia, como se fosse "chifrar" os presentes. Outros personagens, não menos interessantes, são: a cabeça de apá, a mãe do morro, o tuiuiú, a ema, o morcego, o cavalo sem cabeça; esses, são variáveis, de um a outro grupo. ', 
                           style: TextStyle(color: Colors.black)),
                     ),
+                    
+                    // Column(children: [
+                    //   new Image.asset(
+                    //     'images/boi.jpg',
+                    //     width: 370.0,
+                    //     height: 180.0,
+                    //     fit: BoxFit.cover,
+                    //   )
+                    // ]),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
+          
                   ),
                 ],
                 dividerColor: Colors.grey,
@@ -198,7 +208,7 @@ class _BoiState extends State<Boi> {
                       );
                     },
                     body: ListTile(
-                      title: Text('AAAAAAAAAAAAAAAAAAAA',
+                      title: Text('https://www.youtube.com/watch?v=07UTOrhONH0',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded4,
@@ -214,6 +224,15 @@ class _BoiState extends State<Boi> {
             ),
           ]),
           Column(children: [
+            new Image.asset(
+              'images/boi.jpg',
+              width: 370.0,
+              height: 180.0,
+              fit: BoxFit.cover,
+            )
+          ]),
+          Divider(),
+           Column(children: [
             new Image.asset(
               'images/boi.jpg',
               width: 370.0,

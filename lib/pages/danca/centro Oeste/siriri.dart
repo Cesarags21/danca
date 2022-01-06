@@ -61,8 +61,7 @@ class _SiririState extends State<Siriri> {
                     },
                     body: ListTile(
                       title: Text(
-                          'https://www.youtube.com/watch?v=DDchZuDmEH0\n' +
-                              'https://www.youtube.com/watch?v=3mLznlRytik',
+                          'Siriri é uma dança folclórica da Região Centro-Oeste do Brasil (Mato Grosso, Mato Grosso do Sul e Goiás), e faz parte das festas tradicionais e festejos religiosos. A dança lembra as brincadeiras indígenas, com ritmo e expressão hispano-lusitana. Pode ser comparado com o fandango do litoral brasileiro. A música fala das coisas da vida de forma simples e alegre. Como instrumentos musicais, acompanham a viola de cocho, o cracacha (ganzá) e o mocho ou tamboril. A origem do termo siriri é incerta. Para alguns estudiosos vem da palavra otiriri que designa um entremez do século XVIII, em Portugal. Outros acreditam expressar um tipo de cupins de asas. A expressão corporal e a coreografia transmitem o respeito e o culto à amizade, por isso é conhecido como dança mensagem. Ela é dançada com vários passos, como o dos homens, colocam os braços nas costas enquanto as mulheres mexem sua saia. Há vários outros movimentos como se eles tivessem brincando.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded,

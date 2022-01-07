@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/centroOeste.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 class Chupim extends StatefulWidget {
   const Chupim({Key? key}) : super(key: key);
 
@@ -10,6 +10,12 @@ class Chupim extends StatefulWidget {
 }
 
 class _ChupimState extends State<Chupim> {
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -127,11 +133,20 @@ class _ChupimState extends State<Chupim> {
                         ),
                       );
                     },
-                    body: ListTile(
+                    body: ListBody(children: [ ListTile(
                       title: Text(
                           'Os homens vestem camisas e calças longas, e as mulheres vão de saia longa. Entretanto, as vestimentas apresentam cores discretas e sem o tradicional colorido, diferenciando-se da maioria das demais danças típicas da região.  ',
                           style: TextStyle(color: Colors.black)),
                     ),
+                     Image.asset("assets/images/chupim.jpeg",
+                        /*width: 370,
+                        height: 180,*/
+                      ),
+                      ListTile(
+                        title: Text('\n',
+                          style: TextStyle(color: Colors.black)),
+                      ),
+                      ],),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
                   ),

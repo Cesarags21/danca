@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/centroOeste.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Goncalo extends StatefulWidget {
   const Goncalo({Key? key}) : super(key: key);
@@ -10,6 +11,12 @@ class Goncalo extends StatefulWidget {
 }
 
 class _GoncaloState extends State<Goncalo> {
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -127,11 +134,19 @@ class _GoncaloState extends State<Goncalo> {
                         ),
                       );
                     },
-                    body: ListTile(
+                    body: ListBody(children: [ ListTile(
                       title: Text(
                           'Roupas brancas com detalhes coloridos (fitas e acessórios) ',
                           style: TextStyle(color: Colors.black)),
                     ),
+                     Image.asset("assets/images/saogon.jpeg",
+                        /*width: 370,
+                        height: 180,*/
+                      ),
+                      ListTile(
+                        title: Text('\n',
+                          style: TextStyle(color: Colors.black)),
+                      ),],),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
                   ),
@@ -161,12 +176,25 @@ class _GoncaloState extends State<Goncalo> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://www.youtube.com/watch?v=bH7buBX7ohw\n' +
+                    body:ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(Icons.link, color: Colors.blueAccent,),
+                          title: Text(
+                          'https://www.youtube.com/watch?v=bH7buBX7ohw\n',
+                             
+                          style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink("https://www.youtube.com/watch?v=bH7buBX7ohw") ,
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.link, color: Colors.blueAccent,),
+                          title: Text(
                               'https://www.youtube.com/watch?v=TPhBBkiU2OQ\n',
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink("https://www.youtube.com/watch?v=TPhBBkiU2OQ") ,
+                        ),
+                      ],
+                                          ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),

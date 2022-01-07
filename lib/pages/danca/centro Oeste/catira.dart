@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/centroOeste.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 class Catira extends StatefulWidget {
   const Catira({Key? key}) : super(key: key);
 
@@ -11,6 +11,12 @@ class Catira extends StatefulWidget {
 
 class _CatiraState extends State<Catira> {
   @override
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -127,11 +133,20 @@ class _CatiraState extends State<Catira> {
                         ),
                       );
                     },
-                    body: ListTile(
+                    body: ListBody(children: [ ListTile(
                       title: Text(
                           'Os integrantes do grupo de Catira possuem uma vestimenta específica. Eles usam camisas, calças, chapéus e botinas. Esse último adereço talvez seja o mais importante, uma vez que fazem o som de batida, que se junta com as melodias. Além disso, o lenço é muito comum, sendo que alguns usam no pescoço, outros, na cintura. Atualmente, já é possível encontrar mulheres que fazem parte do grupo de catireiros, e mesmo assim, a vestimenta é igual. ',
                           style: TextStyle(color: Colors.black)),
                     ),
+                     Image.asset("assets/images/catira.jpeg",
+                        /*width: 370,
+                        height: 180,*/
+                      ),
+                      ListTile(
+                        title: Text('\n',
+                          style: TextStyle(color: Colors.black)),
+                      ),
+                      ],),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
                   ),
@@ -161,13 +176,34 @@ class _CatiraState extends State<Catira> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://www.youtube.com/watch?v=M70xRvuqZQY\n' +
-                              'https://www.youtube.com/watch?v=PE9YkPLu6KE\n' +
-                              'https://www.youtube.com/watch?v=VCfbsucnqEs',
+                    body: ListBody(children: [
+                        ListTile(
+                          leading: Icon(Icons.link, color: Colors.blueAccent,),
+                          title: Text(
+                          'https://www.youtube.com/watch?v=M70xRvuqZQY\n' ,
+                              
                           style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink("https://www.youtube.com/watch?v=M70xRvuqZQY") ,
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.link, color: Colors.blueAccent,),
+                          title: Text(
+                          
+                              'https://www.youtube.com/watch?v=PE9YkPLu6KE\n',
+                          style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink("https://www.youtube.com/watch?v=PE9YkPLu6KE") ,
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.link, color: Colors.blueAccent,),
+                          
+                          title: Text(
+                          
+                              'https://www.youtube.com/watch?v=VCfbsucnqEs\n',
+                          style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink("https://www.youtube.com/watch?v=VCfbsucnqEs") ,                  
+                          
                     ),
+                    ],),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),
@@ -197,13 +233,31 @@ class _CatiraState extends State<Catira> {
                         ),
                       );
                     },
-                    body: ListTile(
+                    body:ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
                       title: Text(
-                          'https://www.youtube.com/watch?v=RxwOnUYbrVc\n' +
-                              'https://www.youtube.com/watch?v=jKgLiqYi3b4\n' +
-                              'https://www.youtube.com/watch?v=rbxCK4sWxuQ',
+                          'https://www.youtube.com/watch?v=RxwOnUYbrVc\n' ,
+                              
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink("https://www.youtube.com/watch?v=RxwOnUYbrVc") , 
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text(
+                              'https://www.youtube.com/watch?v=jKgLiqYi3b4\n' ,
+
+                          style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink("https://www.youtube.com/watch?v=jKgLiqYi3b4") , 
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text(
+                              'https://www.youtube.com/watch?v=rbxCK4sWxuQ\n',
+                          style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink("https://www.youtube.com/watch?v=rbxCK4sWxuQ") , 
+                      ),
+                    ],),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),

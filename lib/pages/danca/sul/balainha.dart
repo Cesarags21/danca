@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/index.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Balainha extends StatefulWidget {
   const Balainha({Key? key}) : super(key: key);
@@ -10,6 +11,12 @@ class Balainha extends StatefulWidget {
 }
 
 class _BalainhaState extends State<Balainha> {
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -161,10 +168,14 @@ class _BalainhaState extends State<Balainha> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text('https://www.youtube.com/watch?v=wXMjUgaxB4U',
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text('https://www.youtube.com/watch?v=wXMjUgaxB4U\n',
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=wXMjUgaxB4U'),
+                      ),
+                    ],),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),
@@ -194,11 +205,15 @@ class _BalainhaState extends State<Balainha> {
                         ),
                       );
                     },
-                    body: ListTile(
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
                       title: Text(
-                          ' https://www.youtube.com/watch?v=hBejIvc7SLo',
+                          ' https://www.youtube.com/watch?v=hBejIvc7SLo\n',
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=hBejIvc7SLo'),
+                      ),
+                    ],),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),

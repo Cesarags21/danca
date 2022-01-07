@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/index.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Pezinho extends StatefulWidget {
   const Pezinho({Key? key}) : super(key: key);
@@ -10,6 +11,12 @@ class Pezinho extends StatefulWidget {
 }
 
 class _PezinhoState extends State<Pezinho> {
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -161,10 +168,14 @@ class _PezinhoState extends State<Pezinho> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text('https://www.youtube.com/watch?v=nixdhsZeIag',
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text('https://www.youtube.com/watch?v=nixdhsZeIag\n',
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=nixdhsZeIag'),
+                      ),
+                    ],),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),
@@ -194,14 +205,36 @@ class _PezinhoState extends State<Pezinho> {
                         ),
                       );
                     },
-                    body: ListTile(
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
                       title: Text(
-                          ' https://www.youtube.com/watch?v=EJg82ydow1Y\n' +
-                              'https://www.youtube.com/watch?v=Njq14EaG2q4\n' +
-                              'https://www.youtube.com/watch?v=HHH1cIl5gnI\n' +
-                              ' https://www.youtube.com/watch?v=RdFSXdQ8LJc',
+                          ' https://www.youtube.com/watch?v=EJg82ydow1Y\n',
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=EJg82ydow1Y'),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text(
+                              'https://www.youtube.com/watch?v=Njq14EaG2q4\n',
+                          style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=Njq14EaG2q4'),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text(
+                              'https://www.youtube.com/watch?v=HHH1cIl5gnI\n',
+                          style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=HHH1cIl5gnI'),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text(
+                              'https://www.youtube.com/watch?v=RdFSXdQ8LJc\n',
+                          style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=RdFSXdQ8LJc'),
+                      ),
+                    ],),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),

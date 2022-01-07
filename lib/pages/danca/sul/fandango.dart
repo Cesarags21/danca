@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/index.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Fandango extends StatefulWidget {
   const Fandango({Key? key}) : super(key: key);
@@ -10,6 +11,12 @@ class Fandango extends StatefulWidget {
 }
 
 class _FandangoState extends State<Fandango> {
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -161,12 +168,22 @@ class _FandangoState extends State<Fandango> {
                         ),
                       );
                     },
-                    body: ListTile(
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
                       title: Text(
-                          ' https://www.youtube.com/watch?v=yJiSokCVdT0\n' +
-                              'https://www.youtube.com/watch?v=lYBmaDIlpNQ&list=RDEMaJI8x_Pnles7vFjUGBgXfg&start_radio=1',
+                          ' https://www.youtube.com/watch?v=yJiSokCVdT0\n' ,
                           style: TextStyle(color: Colors.black)),
-                    ),
+                           onTap: () => _launchLink('https://www.youtube.com/watch?v=yJiSokCVdT0'),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text(
+                          'https://www.youtube.com/watch?v=lYBmaDIlpNQ&list=RDEMaJI8x_Pnles7vFjUGBgXfg&start_radio=1\n',
+                          style: TextStyle(color: Colors.black)),
+                           onTap: () => _launchLink('https://www.youtube.com/watch?v=lYBmaDIlpNQ&list=RDEMaJI8x_Pnles7vFjUGBgXfg&start_radio=1'),
+                      ),
+                    ],),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),
@@ -196,12 +213,22 @@ class _FandangoState extends State<Fandango> {
                         ),
                       );
                     },
-                    body: ListTile(
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
                       title: Text(
-                          '  https://www.youtube.com/watch?v=7T2irPPoJTQ\n' +
-                              ' https://www.youtube.com/watch?v=hElm_mwMkSM',
+                          '  https://www.youtube.com/watch?v=7T2irPPoJTQ\n' ,
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=7T2irPPoJTQ'),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text(
+                              'https://www.youtube.com/watch?v=hElm_mwMkSM\n',
+                          style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=hElm_mwMkSM'),
+                      ),
+                    ],),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),

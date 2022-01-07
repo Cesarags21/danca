@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/centroOeste.dart';
+import 'package:url_launcher/url_launcher.dart'; 
 
 class Siriri extends StatefulWidget {
   const Siriri({Key? key}) : super(key: key);
@@ -10,6 +11,12 @@ class Siriri extends StatefulWidget {
 }
 
 class _SiririState extends State<Siriri> {
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -127,11 +134,20 @@ class _SiririState extends State<Siriri> {
                         ),
                       );
                     },
-                    body: ListTile(
+                    body: ListBody(children: [ ListTile(
                       title: Text(
-                          'Os cavalheiros normalmente trajam calças cumpridas e camisas coloridas, enquanto as damas usam grandes saias estampadas com tonalidades alegres, à moda da região do Mato Grosso, além disso, outro acessório comum é a flor no cabelo das mulheres.  ',
+                          'Os cavalheiros normalmente trajam calças cumpridas e camisas coloridas, enquanto as damas usam grandes saias estampadas com tonalidades alegres, à moda da região do Mato Grosso, além disso, outro acessório comum é a flor no cabelo das mulheres.  \n\n',
                           style: TextStyle(color: Colors.black)),
                     ),
+                     Image.asset("assets/images/siriri.jpeg",
+                        /*width: 370,
+                        height: 180,*/
+                      ),
+                      ListTile(
+                        title: Text('\n',
+                          style: TextStyle(color: Colors.black)),
+                      ),
+                      ],),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
                   ),
@@ -161,10 +177,14 @@ class _SiririState extends State<Siriri> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text('https://www.youtube.com/watch?v=P5jtd9n0xdg',
+                    body:ListBody(children: [ 
+                    ListTile(
+                      leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text('https://www.youtube.com/watch?v=P5jtd9n0xdg\n',
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink("https://www.youtube.com/watch?v=P5jtd9n0xdg") , 
+                      ),
+                    ],),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),

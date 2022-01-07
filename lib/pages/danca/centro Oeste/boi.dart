@@ -1,23 +1,33 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/centroOeste.dart';
+import 'package:url_launcher/url_launcher.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
 class Boi extends StatefulWidget {
   const Boi({Key? key}) : super(key: key);
 
+  
   @override
   _BoiState createState() => _BoiState();
 }
 
 class _BoiState extends State<Boi> {
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   @override
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
   bool _expanded3 = false;
   bool _expanded4 = false;
-  var _test = "Full Screen";
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -157,6 +167,10 @@ class _BoiState extends State<Boi> {
               ),
             ),
           ]),
+          ///////////////////////////////
+          ////
+          ////]
+          ///
           Column(children: [
             Container(
               margin: EdgeInsets.all(10),
@@ -175,8 +189,10 @@ class _BoiState extends State<Boi> {
                       );
                     },
                     body: ListTile(
+                      leading: Icon(Icons.link),
                       title: Text('https://www.youtube.com/watch?v=07UTOrhONH0',
                           style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink("https://www.youtube.com/watch?v=07UTOrhONH0") ,
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
@@ -226,18 +242,18 @@ class _BoiState extends State<Boi> {
           Column(children: [
             new Image.asset(
               'images/boi.jpg',
-              width: 370.0,
-              height: 180.0,
+              width: 200.0,
+              height: 50.0,
               fit: BoxFit.cover,
             )
           ]),
           Divider(),
            Column(children: [
             new Image.asset(
-              'images/boi.jpg',
-              width: 370.0,
-              height: 180.0,
-              fit: BoxFit.cover,
+              'images/logo.jpeg',
+              width: 50.0,
+              height: 50.0,
+              //fit: BoxFit.,
             )
           ]),
         ],

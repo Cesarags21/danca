@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/norte.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Desfeiteira extends StatefulWidget {
   const Desfeiteira({Key? key}) : super(key: key);
@@ -10,6 +11,12 @@ class Desfeiteira extends StatefulWidget {
 }
 
 class _DesfeiteiraState extends State<Desfeiteira> {
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -158,10 +165,14 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text('https://www.youtube.com/watch?v=xT-8qi0eiM8',
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text('https://www.youtube.com/watch?v=xT-8qi0eiM8\n',
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=xT-8qi0eiM8'),
+                      ),
+                    ],),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),
@@ -191,10 +202,14 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text('https://www.youtube.com/watch?v=xT-8qi0eiM8',
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text('https://www.youtube.com/watch?v=xT-8qi0eiM8\n',
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=xT-8qi0eiM8'),
+                      ),
+                    ],),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),

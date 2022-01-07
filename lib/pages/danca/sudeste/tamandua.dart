@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/sudeste.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Tamandua extends StatefulWidget {
   const Tamandua({ Key? key }) : super(key: key);
@@ -10,6 +11,12 @@ class Tamandua extends StatefulWidget {
 }
 
 class _TamanduaState extends State<Tamandua> {
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -162,10 +169,14 @@ class _TamanduaState extends State<Tamandua> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text("https://www.youtube.com/watch?v=uJQ9hEZkx8Y",
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text("https://www.youtube.com/watch?v=uJQ9hEZkx8Y\n",
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=uJQ9hEZkx8Y'),
+                      ),
+                    ],),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),
@@ -195,10 +206,14 @@ class _TamanduaState extends State<Tamandua> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text("https://www.youtube.com/watch?v=uJQ9hEZkx8Y",
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
+                      title: Text("https://www.youtube.com/watch?v=uJQ9hEZkx8Y\n",
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=uJQ9hEZkx8Y'),
+                      ),
+                    ],),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),

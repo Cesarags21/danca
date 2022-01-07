@@ -51,6 +51,19 @@ flutter:
   assets:
     - assets/images/sul.png
     - assets/images/boi.jpg
+    - assets/images/camaleao.jpeg
+    - assets/images/carimbo.jpeg
+    - assets/images/catira.jpegS
+    - assets/images/chupim.jpeg
+    - assets/images/desfeiteira.jpeg
+    - assets/images/jongo.jpeg
+    - assets/images/lundu.jpeg
+    - assets/images/macarico.jpeg
+    - assets/images/mineiro.jpeg
+    - assets/images/quadrilha.jpeg
+    - assets/images/samba.jpeg
+    - assets/images/saogon.jpeg
+    - assets/images/siriri.jpeg
     - assets/images/fonts/
     
 

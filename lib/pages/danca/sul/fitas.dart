@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/index.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Fitas extends StatefulWidget {
   const Fitas({Key? key}) : super(key: key);
@@ -10,6 +11,12 @@ class Fitas extends StatefulWidget {
 }
 
 class _FitasState extends State<Fitas> {
+  Future<void> _launchLink  (String url) async{
+    
+       launch(url, forceSafariVC: false, forceWebView: false);
+
+    
+  }
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -161,11 +168,15 @@ class _FitasState extends State<Fitas> {
                         ),
                       );
                     },
-                    body: ListTile(
+                    body: ListBody(children: [
+                      ListTile(
+                        leading: Icon(Icons.link, color: Colors.blueAccent,),
                       title: Text(
-                          ' https://www.youtube.com/watch?v=8QGgnbpYMIo',
+                          ' https://www.youtube.com/watch?v=8QGgnbpYMIo\n',
                           style: TextStyle(color: Colors.black)),
-                    ),
+                          onTap: () => _launchLink('https://www.youtube.com/watch?v=8QGgnbpYMIo'),
+                      ),
+                    ],),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),
@@ -196,7 +207,7 @@ class _FitasState extends State<Fitas> {
                       );
                     },
                     body: ListTile(
-                      title: Text(' Não há :( ',
+                      title: Text(' Não há :( \n',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded4,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/index.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Vilao extends StatefulWidget {
   const Vilao({Key? key}) : super(key: key);
@@ -11,6 +12,10 @@ class Vilao extends StatefulWidget {
 
 class _VilaoState extends State<Vilao> {
   @override
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -127,10 +132,23 @@ class _VilaoState extends State<Vilao> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'A dança do vilão é uma expressão folclórica de grande representação desde os tempos coloniais. As roupas mais utilizadas são uma calça preta e uma camisa de botões manga longa de cores variadas. As mulheres costumam usar saias e camisas da mesma cor dos homens, compreendendo assim uma certa harmonia.',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'A dança do vilão é uma expressão folclórica de grande representação desde os tempos coloniais. As roupas mais utilizadas são uma calça preta e uma camisa de botões manga longa de cores variadas. As mulheres costumam usar saias e camisas da mesma cor dos homens, compreendendo assim uma certa harmonia.',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'A dança do vilão é uma expressão folclórica de grande representação desde os tempos coloniais. As roupas mais utilizadas são uma calça preta e uma camisa de botões manga longa de cores variadas. As mulheres costumam usar saias e camisas da mesma cor dos homens, compreendendo assim uma certa harmonia. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -161,10 +179,25 @@ class _VilaoState extends State<Vilao> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          ' https://www.youtube.com/watch?v=45KLD3j6_GY',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       ' https://www.youtube.com/watch?v=45KLD3j6_GY',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=45KLD3j6_GY\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=45KLD3j6_GY"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,

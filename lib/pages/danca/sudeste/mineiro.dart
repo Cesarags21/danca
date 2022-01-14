@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/sudeste.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Mineiro extends StatefulWidget {
-  const Mineiro({ Key? key }) : super(key: key);
+  const Mineiro({Key? key}) : super(key: key);
 
   @override
   _MineiroState createState() => _MineiroState();
@@ -11,6 +12,10 @@ class Mineiro extends StatefulWidget {
 
 class _MineiroState extends State<Mineiro> {
   @override
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -33,194 +38,261 @@ class _MineiroState extends State<Mineiro> {
           ),
         ),
       ),
-
-
-      body: ListView(
-        children: [
-
-          _dancaFaixa(Sudeste()),
-
-          Divider(
-            height: 10,
-            thickness: 0.2,
-            color: Colors.white,
-          ),
-
-          _regNome("Mineiro-Pau"),
-
-           Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.accessibility_new_rounded),
-                        title: Text(
-                          'Conheça a dança',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
+      body: ListView(children: [
+        _dancaFaixa(Sudeste()),
+        Divider(
+          height: 10,
+          thickness: 0.2,
+          color: Colors.white,
+        ),
+        _regNome("Mineiro-Pau"),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.accessibility_new_rounded),
                       title: Text(
-                      "Dança executada por homens, adultos e crianças, cada um levando um ou dois bastões de madeira. Desenvolvida em círculo ou em fileiras que se defrontam, os dançarinos, voltados de frente para o seu par, realizam uma coreografia totalmente marcada pelas batidas dos bastões no chão. Sempre em compasso quaternário, o tempo forte musical é marcado com batida dos bastões no chão. A variedade na forma de bater os restantes três tempos é que dá nomes específicos às partes: “Batida de três”, “Batida de quatro”, “Batida cruzada”, “Batida no alto”, “Batida embaixo” etc. Muitos grupos têm como parte integrante o Boi Pintadinho (RJ) ou o Boi-lé (MG), com seus principais personagens: a Mulinha, o Jaguará, o Boi, os Cabeções.",
+                        'Conheça a dança',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  // body: ListTile(
+                  //   title: Text(
+                  //   "Dança executada por homens, adultos e crianças, cada um levando um ou dois bastões de madeira. Desenvolvida em círculo ou em fileiras que se defrontam, os dançarinos, voltados de frente para o seu par, realizam uma coreografia totalmente marcada pelas batidas dos bastões no chão. Sempre em compasso quaternário, o tempo forte musical é marcado com batida dos bastões no chão. A variedade na forma de bater os restantes três tempos é que dá nomes específicos às partes: “Batida de três”, “Batida de quatro”, “Batida cruzada”, “Batida no alto”, “Batida embaixo” etc. Muitos grupos têm como parte integrante o Boi Pintadinho (RJ) ou o Boi-lé (MG), com seus principais personagens: a Mulinha, o Jaguará, o Boi, os Cabeções.",
+                  //       style: TextStyle(color: Colors.black)),
+                  // ),
+                  body: ListBody(children: [
+                    ListTile(
+                      title: Text(
+                          "Dança executada por homens, adultos e crianças, cada um levando um ou dois bastões de madeira. Desenvolvida em círculo ou em fileiras que se defrontam, os dançarinos, voltados de frente para o seu par, realizam uma coreografia totalmente marcada pelas batidas dos bastões no chão. Sempre em compasso quaternário, o tempo forte musical é marcado com batida dos bastões no chão. A variedade na forma de bater os restantes três tempos é que dá nomes específicos às partes: “Batida de três”, “Batida de quatro”, “Batida cruzada”, “Batida no alto”, “Batida embaixo” etc. Muitos grupos têm como parte integrante o Boi Pintadinho (RJ) ou o Boi-lé (MG), com seus principais personagens: a Mulinha, o Jaguará, o Boi, os Cabeções.",
                           style: TextStyle(color: Colors.black)),
                     ),
-                    isExpanded: _expanded,
-                    canTapOnHeader: true,
-                  ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded = !_expanded;
-                  setState(() {});
-                },
-              ),
+                  ]),
+                  isExpanded: _expanded,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded = !_expanded;
+                setState(() {});
+              },
             ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.history_edu_rounded),
-                        title: Text(
-                          'História',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("Foi um coco dançado bolinhos pelos negros escravos, que aproveitavam os raros momentos de folga / descanso para ensaiarem uma dança guerreira de ataque e defesa, para o caso de uma fulga. Quem assistia, no caso dos feitores e senhores de engenho, viam apenas um bailado dançado com dois porretes. Enquanto a fuga não acontecia, o coco era dançado ao som dos porretes, temperado com o batuque, lundu e outras danças.",
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.history_edu_rounded),
+                      title: Text(
+                        'História',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  body: ListTile(
+                    title: Text(
+                        "Foi um coco dançado bolinhos pelos negros escravos, que aproveitavam os raros momentos de folga / descanso para ensaiarem uma dança guerreira de ataque e defesa, para o caso de uma fulga. Quem assistia, no caso dos feitores e senhores de engenho, viam apenas um bailado dançado com dois porretes. Enquanto a fuga não acontecia, o coco era dançado ao som dos porretes, temperado com o batuque, lundu e outras danças.",
                         style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded1,
-                    canTapOnHeader: true,
                   ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded1 = !_expanded1;
-                  setState(() {});
-                },
-              ),
+                  isExpanded: _expanded1,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded1 = !_expanded1;
+                setState(() {});
+              },
             ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.crop_original_rounded),
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.crop_original_rounded),
+                      title: Text(
+                        'Vestimentas',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  body: ListBody(
+                    children: [
+                      ListTile(
                         title: Text(
-                          'Vestimentas',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("Os homens vestem calça comprida e camisa e as mulheres, saia rodada e blusa, seguindo os enfeites do gosto do mestre",
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded2,
-                    canTapOnHeader: true,
+                            'Os homens vestem calça comprida e camisa e as mulheres, saia rodada e blusa, seguindo os enfeites do gosto do mestre ',
+                            style: TextStyle(color: Colors.black)),
+                      ),
+                      Image.asset(
+                        "assets/images/mineiro.jpg",
+                        /*width: 370,
+                        height: 180,*/
+                      ),
+                      ListTile(
+                        title:
+                            Text('\n', style: TextStyle(color: Colors.black)),
+                      ),
+                    ],
                   ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded2 = !_expanded2;
-                  setState(() {});
-                },
-              ),
+                  isExpanded: _expanded2,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded2 = !_expanded2;
+                setState(() {});
+              },
             ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.audiotrack_rounded),
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.audiotrack_rounded),
+                      title: Text(
+                        'Músicas',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  // body: ListTile(
+                  //   title: Text(
+                  //       "https://www.youtube.com/watch?v=ENhdjQHBeTI \n" +
+                  //           '\n' +
+                  //           "https://www.youtube.com/watch?v=MzaZZ7rOM3E",
+                  //       style: TextStyle(color: Colors.black)),
+                  // ),
+                  body: ListBody(
+                    children: [
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
                         title: Text(
-                          'Músicas',
-                          style: TextStyle(color: Colors.black),
+                            'https://www.youtube.com/watch?v=ENhdjQHBeTI\n',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=ENhdjQHBeTI"),
+                      ),
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
                         ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("https://www.youtube.com/watch?v=ENhdjQHBeTI \n" +
-                      '\n' + 
-                      "https://www.youtube.com/watch?v=MzaZZ7rOM3E",
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded3,
-                    canTapOnHeader: true,
-                  ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded3 = !_expanded3;
-                  setState(() {});
-                },
-              ),
-            ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.play_arrow_rounded),
                         title: Text(
-                          'Aprenda a dançar',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("https://www.youtube.com/watch?v=ENhdjQHBeTI \n" +
-                      '\n' + 
-                      "https://www.youtube.com/watch?v=MzaZZ7rOM3E",
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded4,
-                    canTapOnHeader: true,
+                            'https://www.youtube.com/watch?v=MzaZZ7rOM3E\n',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=MzaZZ7rOM3E"),
+                      ),
+                    ],
                   ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded4 = !_expanded4;
-                  setState(() {});
-                },
-              ),
+                  isExpanded: _expanded3,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded3 = !_expanded3;
+                setState(() {});
+              },
             ),
-          ]),
-
-        ]
-      ),
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.play_arrow_rounded),
+                      title: Text(
+                        'Aprenda a dançar',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  // body: ListTile(
+                  //   title: Text(
+                  //       "https://www.youtube.com/watch?v=ENhdjQHBeTI \n" +
+                  //           '\n' +
+                  //           "https://www.youtube.com/watch?v=MzaZZ7rOM3E",
+                  //       style: TextStyle(color: Colors.black)),
+                  // ),
+                  body: ListBody(
+                    children: [
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
+                        title: Text(
+                            'https://www.youtube.com/watch?v=ENhdjQHBeTI\n',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=ENhdjQHBeTI"),
+                      ),
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
+                        title: Text(
+                            'https://www.youtube.com/watch?v=MzaZZ7rOM3E\n',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=MzaZZ7rOM3E"),
+                      ),
+                    ],
+                  ),
+                  isExpanded: _expanded4,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded4 = !_expanded4;
+                setState(() {});
+              },
+            ),
+          ),
+        ]),
+      ]),
     );
   }
 
@@ -338,6 +410,4 @@ class _MineiroState extends State<Mineiro> {
       ),
     ]);
   }
-
-
 }

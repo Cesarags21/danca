@@ -11,12 +11,10 @@ class Fitas extends StatefulWidget {
 }
 
 class _FitasState extends State<Fitas> {
-  Future<void> _launchLink  (String url) async{
-    
-       launch(url, forceSafariVC: false, forceWebView: false);
-
-    
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
   }
+
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -134,10 +132,28 @@ class _FitasState extends State<Fitas> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'A vestimenta dos participantes é bastante simples: de caráter junino, as mulheres usam vestidos com estampas floridas e alegres, sandálias de sola e flores no cabelo. Já os rapazes usam camisa quadriculada ou xadrez, calça, chapéu na cabeça e sandália de sola ou botas. ',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'A vestimenta dos participantes é bastante simples: de caráter junino, as mulheres usam vestidos com estampas floridas e alegres, sandálias de sola e flores no cabelo. Já os rapazes usam camisa quadriculada ou xadrez, calça, chapéu na cabeça e sandália de sola ou botas. ',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'A vestimenta dos participantes é bastante simples: de caráter junino, as mulheres usam vestidos com estampas floridas e alegres, sandálias de sola e flores no cabelo. Já os rapazes usam camisa quadriculada ou xadrez, calça, chapéu na cabeça e sandália de sola ou botas. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/fitas.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -168,15 +184,21 @@ class _FitasState extends State<Fitas> {
                         ),
                       );
                     },
-                    body: ListBody(children: [
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text(
-                          ' https://www.youtube.com/watch?v=8QGgnbpYMIo\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=8QGgnbpYMIo'),
-                      ),
-                    ],),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              ' https://www.youtube.com/watch?v=8QGgnbpYMIo\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=8QGgnbpYMIo'),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),

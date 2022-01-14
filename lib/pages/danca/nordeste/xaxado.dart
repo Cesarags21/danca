@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/nordeste.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Xaxado extends StatefulWidget {
   const Xaxado({Key? key}) : super(key: key);
@@ -11,6 +12,10 @@ class Xaxado extends StatefulWidget {
 
 class _XaxadoState extends State<Xaxado> {
   @override
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -127,10 +132,28 @@ class _XaxadoState extends State<Xaxado> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'As roupas utilizadas no xaxado são baseadas nas vestimentas características dos cangaceiros, ou seja, em tons de cáqui e marrom, com camisas de manga longa e calças compridas feitas com tecido grosso e couro, que eram utilizadas para a proteção contra os espinhos da caatinga, além do chapéu e das alpercatas. No chapéu em específico, é possível observar a existência de materiais brilhantes, como pequenos pedaços de espelhos, vidros ou moedas. Estes detalhes eram utilizados na época do cangaço para enfeitar o acessório, bem como para atrapalhar a mira de um possível inimigo sob o sol do sertão, já que eles poderiam refletir a luz no rosto dos oponentes. É possível identificar ainda na caracterização dos grupos de xaxado alguns acessórios como lenço no pescoço, moringa ou cabaça pendurada no corpo das mulheres e os óculos de sol com lentes arredondadas nos homens. ',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'As roupas utilizadas no xaxado são baseadas nas vestimentas características dos cangaceiros, ou seja, em tons de cáqui e marrom, com camisas de manga longa e calças compridas feitas com tecido grosso e couro, que eram utilizadas para a proteção contra os espinhos da caatinga, além do chapéu e das alpercatas. No chapéu em específico, é possível observar a existência de materiais brilhantes, como pequenos pedaços de espelhos, vidros ou moedas. Estes detalhes eram utilizados na época do cangaço para enfeitar o acessório, bem como para atrapalhar a mira de um possível inimigo sob o sol do sertão, já que eles poderiam refletir a luz no rosto dos oponentes. É possível identificar ainda na caracterização dos grupos de xaxado alguns acessórios como lenço no pescoço, moringa ou cabaça pendurada no corpo das mulheres e os óculos de sol com lentes arredondadas nos homens. ',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'As roupas utilizadas no xaxado são baseadas nas vestimentas características dos cangaceiros, ou seja, em tons de cáqui e marrom, com camisas de manga longa e calças compridas feitas com tecido grosso e couro, que eram utilizadas para a proteção contra os espinhos da caatinga, além do chapéu e das alpercatas. No chapéu em específico, é possível observar a existência de materiais brilhantes, como pequenos pedaços de espelhos, vidros ou moedas. Estes detalhes eram utilizados na época do cangaço para enfeitar o acessório, bem como para atrapalhar a mira de um possível inimigo sob o sol do sertão, já que eles poderiam refletir a luz no rosto dos oponentes. É possível identificar ainda na caracterização dos grupos de xaxado alguns acessórios como lenço no pescoço, moringa ou cabaça pendurada no corpo das mulheres e os óculos de sol com lentes arredondadas nos homens ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/xaxado.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -161,11 +184,37 @@ class _XaxadoState extends State<Xaxado> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://www.letras.mus.br/luiz-gonzaga/1563870/\n' +
-                              'https://www.letras.mus.br/trio-nordestino/1886459/',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'https://www.letras.mus.br/luiz-gonzaga/1563870/\n' +
+                    //           'https://www.letras.mus.br/trio-nordestino/1886459/',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.letras.mus.br/luiz-gonzaga/1563870/\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.letras.mus.br/luiz-gonzaga/1563870/"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.letras.mus.br/trio-nordestino/1886459/\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.letras.mus.br/trio-nordestino/1886459/"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
@@ -196,11 +245,37 @@ class _XaxadoState extends State<Xaxado> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://www.youtube.com/watch?v=pSm-fO 299-o\n' +
-                              'https://www.youtube.com/watch?v=8V8ARN-WHd 4',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'https://www.youtube.com/watch?v=pSm-fO 299-o\n' +
+                    //           'https://www.youtube.com/watch?v=8V8ARN-WHd 4',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=pSm-fO 299-o\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=pSm-fO 299-o"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=8V8ARN-WHd 4\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=8V8ARN-WHd 4"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,

@@ -11,12 +11,10 @@ class Desfeiteira extends StatefulWidget {
 }
 
 class _DesfeiteiraState extends State<Desfeiteira> {
-  Future<void> _launchLink  (String url) async{
-    
-       launch(url, forceSafariVC: false, forceWebView: false);
-
-    
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
   }
+
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -66,10 +64,18 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'dança de pares enlaçados que circulam livremente pelo salão. A única obrigatoriedade é passar, cada par por sua vez, diante do conjunto musical que executa partituras alegres e vivas de: valsas, polcas, sambas rurais, chulas amazonenses, mazurcas, xotes etc. Repentinamente, os músicos cessam de tocar e os pares também estacam, onde estiverem. Aquele que coincidir estar na frente da banda passará por uma prova: o músico-chefe escolhe a dama ou o cavalheiro para declamar versos. Quem não conseguir é vaiado por todos e, por esta desfeita, paga uma prenda, ficando assim desfeiteado.',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'dança de pares enlaçados que circulam livremente pelo salão. A única obrigatoriedade é passar, cada par por sua vez, diante do conjunto musical que executa partituras alegres e vivas de: valsas, polcas, sambas rurais, chulas amazonenses, mazurcas, xotes etc. Repentinamente, os músicos cessam de tocar e os pares também estacam, onde estiverem. Aquele que coincidir estar na frente da banda passará por uma prova: o músico-chefe escolhe a dama ou o cavalheiro para declamar versos. Quem não conseguir é vaiado por todos e, por esta desfeita, paga uma prenda, ficando assim desfeiteado. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded,
                     canTapOnHeader: true,
@@ -134,7 +140,8 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                       );
                     },
                     body: ListTile(
-                      title: Text('Não há :(', style: TextStyle(color: Colors.black)),
+                      title: Text('Não há :(',
+                          style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -165,14 +172,21 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                         ),
                       );
                     },
-                    body: ListBody(children: [
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text('https://www.youtube.com/watch?v=xT-8qi0eiM8\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=xT-8qi0eiM8'),
-                      ),
-                    ],),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=xT-8qi0eiM8\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=xT-8qi0eiM8'),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),
@@ -202,14 +216,21 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                         ),
                       );
                     },
-                    body: ListBody(children: [
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text('https://www.youtube.com/watch?v=xT-8qi0eiM8\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=xT-8qi0eiM8'),
-                      ),
-                    ],),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=xT-8qi0eiM8\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=xT-8qi0eiM8'),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),

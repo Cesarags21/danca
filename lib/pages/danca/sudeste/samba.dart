@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/sudeste.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Samba extends StatefulWidget {
-  const Samba({ Key? key }) : super(key: key);
+  const Samba({Key? key}) : super(key: key);
 
   @override
   _SambaState createState() => _SambaState();
@@ -11,6 +12,10 @@ class Samba extends StatefulWidget {
 
 class _SambaState extends State<Samba> {
   @override
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -33,205 +38,308 @@ class _SambaState extends State<Samba> {
           ),
         ),
       ),
+      body: ListView(children: [
+        _dancaFaixa(Sudeste()),
 
-      body: ListView(
-        children: [
+        Divider(
+          height: 10,
+          thickness: 0.2,
+          color: Colors.white,
+        ),
 
-          _dancaFaixa(Sudeste()),
+        _regNome("Samba"),
 
-          Divider(
-            height: 10,
-            thickness: 0.2,
-            color: Colors.white,
-          ),
-
-          _regNome("Samba"),
-
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.accessibility_new_rounded),
-                        title: Text(
-                          'Conheça a dança',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("O samba é uma forma de dança originária do Brasil. É ligada ao ritmo musical de mesmo nome, e muito praticada por passistas de escolas de samba e em pagodes.",
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded,
-                    canTapOnHeader: true,
-                  ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded = !_expanded;
-                  setState(() {});
-                },
-              ),
-            ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.history_edu_rounded),
-                        title: Text(
-                          'História',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.accessibility_new_rounded),
                       title: Text(
-                          'O samba é oriundo do Rio de Janeiro. Deriva de um folguedo que emergiu na Bahia em meados século XIX com notável influência africana, o samba de roda, que por sua vez guarda semelhanças com o coco, dança de roda mais antiga surgida na Capitania de Pernambuco com influências dos batuques africanos e dos bailados indígenas. Em terras fluminenses, o samba de roda criou raízes e se desenvolveu, mesmo sendo perseguido. Durante a década de 1920, por exemplo, quem fosse pego dançando ou cantando samba corria um grande risco de ser preso. Isso porque o samba era ligado à cultura negra, que era malvista na época. Só mais tarde é que ele passou a ser encarado como um símbolo nacional, principalmente no início dos anos 40, durante o governo de Getúlio Vargas.',
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded1,
-                    canTapOnHeader: true,
-                  ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded1 = !_expanded1;
-                  setState(() {});
-                },
-              ),
-            ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.crop_original_rounded),
+                        'Conheça a dança',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  // body: ListTile(
+                  //   title: Text("O samba é uma forma de dança originária do Brasil. É ligada ao ritmo musical de mesmo nome, e muito praticada por passistas de escolas de samba e em pagodes.",
+                  //       style: TextStyle(color: Colors.black)),
+                  // ),
+                  body: ListBody(
+                    children: [
+                      ListTile(
                         title: Text(
-                          'Vestimentas',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("A roupa masculina mais tradicional é a do malandro, esteriótipo do sambista do morro, de calça branca, camisa listrada ou paletó branco, chapéu de palha etc. Já dentre as roupas femininas, a que melhor representa o carnaval é a roupa de baiana por causa das origens do samba no Rio de Janeiro, com saia rodada, bata rendada, pano da costa, torso e muitos colares, pulseiras e balangandãs.",
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded2,
-                    canTapOnHeader: true,
+                            'O samba é uma forma de dança originária do Brasil. É ligada ao ritmo musical de mesmo nome, e muito praticada por passistas de escolas de samba e em pagodes. ',
+                            style: TextStyle(color: Colors.black)),
+                      ),
+                      ListTile(
+                        title:
+                            Text('\n', style: TextStyle(color: Colors.black)),
+                      ),
+                    ],
                   ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded2 = !_expanded2;
-                  setState(() {});
-                },
-              ),
+                  isExpanded: _expanded,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded = !_expanded;
+                setState(() {});
+              },
             ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.audiotrack_rounded),
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.history_edu_rounded),
+                      title: Text(
+                        'História',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  body: ListTile(
+                    title: Text(
+                        'O samba é oriundo do Rio de Janeiro. Deriva de um folguedo que emergiu na Bahia em meados século XIX com notável influência africana, o samba de roda, que por sua vez guarda semelhanças com o coco, dança de roda mais antiga surgida na Capitania de Pernambuco com influências dos batuques africanos e dos bailados indígenas. Em terras fluminenses, o samba de roda criou raízes e se desenvolveu, mesmo sendo perseguido. Durante a década de 1920, por exemplo, quem fosse pego dançando ou cantando samba corria um grande risco de ser preso. Isso porque o samba era ligado à cultura negra, que era malvista na época. Só mais tarde é que ele passou a ser encarado como um símbolo nacional, principalmente no início dos anos 40, durante o governo de Getúlio Vargas.',
+                        style: TextStyle(color: Colors.black)),
+                  ),
+                  isExpanded: _expanded1,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded1 = !_expanded1;
+                setState(() {});
+              },
+            ),
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.crop_original_rounded),
+                      title: Text(
+                        'Vestimentas',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  // body: ListTile(
+                  //   title: Text(
+                  //       "A roupa masculina mais tradicional é a do malandro, esteriótipo do sambista do morro, de calça branca, camisa listrada ou paletó branco, chapéu de palha etc. Já dentre as roupas femininas, a que melhor representa o carnaval é a roupa de baiana por causa das origens do samba no Rio de Janeiro, com saia rodada, bata rendada, pano da costa, torso e muitos colares, pulseiras e balangandãs.",
+                  //       style: TextStyle(color: Colors.black)),
+                  // ),
+                  body: ListBody(
+                    children: [
+                      ListTile(
                         title: Text(
-                          'Músicas',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("https://www.youtube.com/watch?v=4DZ00HB5ZV0 \n" +
-                                  "\n" +
-                                  "https://www.youtube.com/watch?v=Tjh1wq24kTk \n" + 
-                                  "\n" +
-                                  "https://www.youtube.com/watch?v=4glVJKfs1Zg",
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded3,
-                    canTapOnHeader: true,
+                            'A roupa masculina mais tradicional é a do malandro, esteriótipo do sambista do morro, de calça branca, camisa listrada ou paletó branco, chapéu de palha etc. Já dentre as roupas femininas, a que melhor representa o carnaval é a roupa de baiana por causa das origens do samba no Rio de Janeiro, com saia rodada, bata rendada, pano da costa, torso e muitos colares, pulseiras e balangandãs. ',
+                            style: TextStyle(color: Colors.black)),
+                      ),
+                      Image.asset(
+                        "assets/images/samba.jpg",
+                        /*width: 370,
+                        height: 180,*/
+                      ),
+                      ListTile(
+                        title:
+                            Text('\n', style: TextStyle(color: Colors.black)),
+                      ),
+                    ],
                   ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded3 = !_expanded3;
-                  setState(() {});
-                },
-              ),
+                  isExpanded: _expanded2,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded2 = !_expanded2;
+                setState(() {});
+              },
             ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.play_arrow_rounded),
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.audiotrack_rounded),
+                      title: Text(
+                        'Músicas',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  // body: ListTile(
+                  //   title: Text(
+                  //       "https://www.youtube.com/watch?v=4DZ00HB5ZV0 \n" +
+                  //           "\n" +
+                  //           "https://www.youtube.com/watch?v=Tjh1wq24kTk \n" +
+                  //           "\n" +
+                  //           "https://www.youtube.com/watch?v=4glVJKfs1Zg",
+                  //       style: TextStyle(color: Colors.black)),
+                  // ),
+                  body: ListBody(
+                    children: [
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
                         title: Text(
-                          'Aprenda a dançar',
-                          style: TextStyle(color: Colors.black),
+                            'https://www.youtube.com/watch?v=4DZ00HB5ZV0\n',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=4DZ00HB5ZV0"),
+                      ),
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
                         ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("https://www.youtube.com/watch?v=4DZ00HB5ZV0 \n" +
-                                  "\n" +
-                                  "https://www.youtube.com/watch?v=Tjh1wq24kTk \n" + 
-                                  "\n" +
-                                  "https://www.youtube.com/watch?v=4glVJKfs1Zg",
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded4,
-                    canTapOnHeader: true,
+                        title: Text(
+                            'https://www.youtube.com/watch?v=Tjh1wq24kTk\n',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=Tjh1wq24kTk"),
+                      ),
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
+                        title: Text(
+                            'https://www.youtube.com/watch?v=4glVJKfs1Zg\n',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=4glVJKfs1Zg"),
+                      ),
+                    ],
                   ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded4 = !_expanded4;
-                  setState(() {});
-                },
-              ),
+                  isExpanded: _expanded3,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded3 = !_expanded3;
+                setState(() {});
+              },
             ),
-          ]),
-          // Column(children: [
-          //   new Image.asset(
-          //     'images/boi.jpg',
-          //     width: 370.0,
-          //     height: 180.0,
-          //     fit: BoxFit.cover,
-          //   )
-          // ]),
-
-        ]
-      ),
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.play_arrow_rounded),
+                      title: Text(
+                        'Aprenda a dançar',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  // body: ListTile(
+                  //   title: Text(
+                  //       "https://www.youtube.com/watch?v=4DZ00HB5ZV0 \n" +
+                  //           "\n" +
+                  //           "https://www.youtube.com/watch?v=Tjh1wq24kTk \n" +
+                  //           "\n" +
+                  //           "https://www.youtube.com/watch?v=4glVJKfs1Zg",
+                  //       style: TextStyle(color: Colors.black)),
+                  // ),
+                  body: ListBody(
+                    children: [
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
+                        title: Text(
+                            'https://www.youtube.com/watch?v=4DZ00HB5ZV0\n',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=4DZ00HB5ZV0"),
+                      ),
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
+                        title: Text(
+                            'https://www.youtube.com/watch?v=Tjh1wq24kTk\n',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=Tjh1wq24kTk"),
+                      ),
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
+                        title: Text(
+                            'https://www.youtube.com/watch?v=4glVJKfs1Zg\n',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=4glVJKfs1Zg"),
+                      ),
+                    ],
+                  ),
+                  isExpanded: _expanded4,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded4 = !_expanded4;
+                setState(() {});
+              },
+            ),
+          ),
+        ]),
+        // Column(children: [
+        //   new Image.asset(
+        //     'images/boi.jpg',
+        //     width: 370.0,
+        //     height: 180.0,
+        //     fit: BoxFit.cover,
+        //   )
+        // ]),
+      ]),
     );
   }
 
@@ -349,6 +457,4 @@ class _SambaState extends State<Samba> {
       ),
     ]);
   }
-
-
 }

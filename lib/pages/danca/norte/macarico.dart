@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/norte.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Macarico extends StatefulWidget {
   const Macarico({Key? key}) : super(key: key);
@@ -11,6 +12,10 @@ class Macarico extends StatefulWidget {
 
 class _MacaricoState extends State<Macarico> {
   @override
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -59,10 +64,23 @@ class _MacaricoState extends State<Macarico> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          ' apresenta música saltitante com coro alegre e animado. Os dançarinos, organizados aos pares, desenvolvem uma coreografia constituída por cinco diferentes movimentos: “Charola”, “Roca-roca”, “Repini-co”, “Maçaricado” e “Geléia de Mocotó”. Os pares, ora enlaçados ora soltos, dão passos corridos para frente e para trás, de deslize laterais, volteios rápidos, rodopios ligeiros, culminando com uma umbigada. A música é executada em sanfona ou acordeão, viola, violão, rabeca, tambores pequenos pífanos. ',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'apresenta música saltitante com coro alegre e animado. Os dançarinos, organizados aos pares, desenvolvem uma coreografia constituída por cinco diferentes movimentos: “Charola”, “Roca-roca”, “Repini-co”, “Maçaricado” e “Geléia de Mocotó”. Os pares, ora enlaçados ora soltos, dão passos corridos para frente e para trás, de deslize laterais, volteios rápidos, rodopios ligeiros, culminando com uma umbigada. A música é executada em sanfona ou acordeão, viola, violão, rabeca, tambores pequenos pífanos. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/macarico.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded,
                     canTapOnHeader: true,
@@ -127,10 +145,28 @@ class _MacaricoState extends State<Macarico> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'As vestimentas não seguem um padrão, são geralmente vistos saias e blusas bem coloridas, com aspecto de leveza e movimento ao movimentar as roupas, ritmados por tambores, xique-xiques, rabecas, violões e demais instrumentos.',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'As vestimentas não seguem um padrão, são geralmente vistos saias e blusas bem coloridas, com aspecto de leveza e movimento ao movimentar as roupas, ritmados por tambores, xique-xiques, rabecas, violões e demais instrumentos.',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'As vestimentas não seguem um padrão, são geralmente vistos saias e blusas bem coloridas, com aspecto de leveza e movimento ao movimentar as roupas, ritmados por tambores, xique-xiques, rabecas, violões e demais instrumentos. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/macarico.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -161,11 +197,37 @@ class _MacaricoState extends State<Macarico> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          '  https://www.youtube.com/watch?v=Ef-gFTsH8Gg' +
-                              'https://www.youtube.com/watch?v=yTV6UKnIZXs',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       '  https://www.youtube.com/watch?v=Ef-gFTsH8Gg' +
+                    //           'https://www.youtube.com/watch?v=yTV6UKnIZXs',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=Ef-gFTsH8Gg\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=Ef-gFTsH8Gg"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=yTV6UKnIZXs\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=yTV6UKnIZXs"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
@@ -196,10 +258,31 @@ class _MacaricoState extends State<Macarico> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text('https://www.youtube.com/watch?v=Ef-gFTsH8Gg' +
-                              'https://www.youtube.com/watch?v=yTV6UKnIZXs',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=Ef-gFTsH8Gg\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=Ef-gFTsH8Gg"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=yTV6UKnIZXs\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=yTV6UKnIZXs"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,

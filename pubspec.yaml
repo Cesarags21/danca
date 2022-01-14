@@ -51,19 +51,27 @@ flutter:
   assets:
     - assets/images/sul.png
     - assets/images/boi.jpg
-    - assets/images/camaleao.jpeg
-    - assets/images/carimbo.jpeg
-    - assets/images/catira.jpegS
-    - assets/images/chupim.jpeg
+    - assets/images/pezinho.jpg
+    - assets/images/fitas.jpg
+    - assets/images/fandango.jpg
+    - assets/images/balainha.jpeg
+    - assets/images/bumba.png
+    - assets/images/camaleao.jpg
+    - assets/images/carimbo.jpg
+    - assets/images/catira.jpg
+    - assets/images/ciranda.jpg
+    - assets/images/chupim.jpg
     - assets/images/desfeiteira.jpeg
-    - assets/images/jongo.jpeg
-    - assets/images/lundu.jpeg
-    - assets/images/macarico.jpeg
-    - assets/images/mineiro.jpeg
-    - assets/images/quadrilha.jpeg
-    - assets/images/samba.jpeg
-    - assets/images/saogon.jpeg
-    - assets/images/siriri.jpeg
+    - assets/images/jongo.jpg
+    - assets/images/frevo.jpg
+    - assets/images/lundu.jpg
+    - assets/images/macarico.jpg
+    - assets/images/mineiro.jpg
+    - assets/images/quadrilha.jpg
+    - assets/images/samba.jpg
+    - assets/images/saogon.jpg
+    - assets/images/siriri.jpg
+    - assets/images/xaxado.jpg
     - assets/images/fonts/
     
 

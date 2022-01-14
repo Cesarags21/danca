@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/nordeste.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Coco extends StatefulWidget {
   const Coco({Key? key}) : super(key: key);
@@ -11,6 +12,10 @@ class Coco extends StatefulWidget {
 
 class _CocoState extends State<Coco> {
   @override
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -160,10 +165,25 @@ class _CocoState extends State<Coco> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://www.letras.mus.br/cheiro-de-amor/186962/',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'https://www.letras.mus.br/cheiro-de-amor/186962/',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.letras.mus.br/cheiro-de-amor/186962/\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.letras.mus.br/cheiro-de-amor/186962/"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
@@ -194,10 +214,25 @@ class _CocoState extends State<Coco> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://www.youtube.com/watch?v=cFH u9W nAo 68',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'https://www.youtube.com/watch?v=cFH u9W nAo 68',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=cFH u9W nAo 68\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=cFH u9W nAo 68"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,

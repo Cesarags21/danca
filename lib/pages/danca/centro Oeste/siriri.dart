@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/centroOeste.dart';
-import 'package:url_launcher/url_launcher.dart'; 
+import 'package:url_launcher/url_launcher.dart';
 
 class Siriri extends StatefulWidget {
   const Siriri({Key? key}) : super(key: key);
@@ -11,12 +11,10 @@ class Siriri extends StatefulWidget {
 }
 
 class _SiririState extends State<Siriri> {
-  Future<void> _launchLink  (String url) async{
-    
-       launch(url, forceSafariVC: false, forceWebView: false);
-
-    
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
   }
+
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -66,10 +64,18 @@ class _SiririState extends State<Siriri> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'Siriri é uma dança folclórica da Região Centro-Oeste do Brasil (Mato Grosso, Mato Grosso do Sul e Goiás), e faz parte das festas tradicionais e festejos religiosos. A dança lembra as brincadeiras indígenas, com ritmo e expressão hispano-lusitana. Pode ser comparado com o fandango do litoral brasileiro. A música fala das coisas da vida de forma simples e alegre. Como instrumentos musicais, acompanham a viola de cocho, o cracacha (ganzá) e o mocho ou tamboril. A origem do termo siriri é incerta. Para alguns estudiosos vem da palavra otiriri que designa um entremez do século XVIII, em Portugal. Outros acreditam expressar um tipo de cupins de asas. A expressão corporal e a coreografia transmitem o respeito e o culto à amizade, por isso é conhecido como dança mensagem. Ela é dançada com vários passos, como o dos homens, colocam os braços nas costas enquanto as mulheres mexem sua saia. Há vários outros movimentos como se eles tivessem brincando.',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'Siriri é uma dança folclórica da Região Centro-Oeste do Brasil (Mato Grosso, Mato Grosso do Sul e Goiás), e faz parte das festas tradicionais e festejos religiosos. A dança lembra as brincadeiras indígenas, com ritmo e expressão hispano-lusitana. Pode ser comparado com o fandango do litoral brasileiro. A música fala das coisas da vida de forma simples e alegre. Como instrumentos musicais, acompanham a viola de cocho, o cracacha (ganzá) e o mocho ou tamboril. A origem do termo siriri é incerta. Para alguns estudiosos vem da palavra otiriri que designa um entremez do século XVIII, em Portugal. Outros acreditam expressar um tipo de cupins de asas. A expressão corporal e a coreografia transmitem o respeito e o culto à amizade, por isso é conhecido como dança mensagem. Ela é dançada com vários passos, como o dos homens, colocam os braços nas costas enquanto as mulheres mexem sua saia. Há vários outros movimentos como se eles tivessem brincando. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded,
                     canTapOnHeader: true,
@@ -134,20 +140,42 @@ class _SiririState extends State<Siriri> {
                         ),
                       );
                     },
-                    body: ListBody(children: [ ListTile(
-                      title: Text(
-                          'Os cavalheiros normalmente trajam calças cumpridas e camisas coloridas, enquanto as damas usam grandes saias estampadas com tonalidades alegres, à moda da região do Mato Grosso, além disso, outro acessório comum é a flor no cabelo das mulheres.  \n\n',
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                     Image.asset("assets/images/siriri.jpeg",
-                        /*width: 370,
+                    // body: ListBody(
+                    //   children: [
+                    //     ListTile(
+                    //       title: Text(
+                    //           'Os cavalheiros normalmente trajam calças cumpridas e camisas coloridas, enquanto as damas usam grandes saias estampadas com tonalidades alegres, à moda da região do Mato Grosso, além disso, outro acessório comum é a flor no cabelo das mulheres.  \n\n',
+                    //           style: TextStyle(color: Colors.black)),
+                    //     ),
+                    //     Image.asset(
+                    //       "assets/images/siriri.jpg",
+                    //       /*width: 370,
+                    //     height: 180,*/
+                    //     ),
+                    //     ListTile(
+                    //       title:
+                    //           Text('\n', style: TextStyle(color: Colors.black)),
+                    //     ),
+                    //   ],
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'Os cavalheiros normalmente trajam calças cumpridas e camisas coloridas, enquanto as damas usam grandes saias estampadas com tonalidades alegres, à moda da região do Mato Grosso, além disso, outro acessório comum é a flor no cabelo das mulheres. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/siriri.jpg",
+                          /*width: 370,
                         height: 180,*/
-                      ),
-                      ListTile(
-                        title: Text('\n',
-                          style: TextStyle(color: Colors.black)),
-                      ),
-                      ],),
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
                   ),
@@ -177,14 +205,21 @@ class _SiririState extends State<Siriri> {
                         ),
                       );
                     },
-                    body:ListBody(children: [ 
-                    ListTile(
-                      leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text('https://www.youtube.com/watch?v=P5jtd9n0xdg\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink("https://www.youtube.com/watch?v=P5jtd9n0xdg") , 
-                      ),
-                    ],),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=P5jtd9n0xdg\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=P5jtd9n0xdg"),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),

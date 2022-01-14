@@ -11,12 +11,10 @@ class Fandango extends StatefulWidget {
 }
 
 class _FandangoState extends State<Fandango> {
-  Future<void> _launchLink  (String url) async{
-    
-       launch(url, forceSafariVC: false, forceWebView: false);
-
-    
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
   }
+
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -134,10 +132,23 @@ class _FandangoState extends State<Fandango> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'As roupas usadas na dança fandango são as roupas de estancieira para as mulheres, como as saias e vestidos de prenda, e botas de madeira e camisa xadrez para os homens. Comumente, a madeira utilizada na produção das botas é aquela proveniente das laranjeiras. Há muitas variações dessa modalidade de dança. ',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'As roupas usadas na dança fandango são as roupas de estancieira para as mulheres, como as saias e vestidos de prenda, e botas de madeira e camisa xadrez para os homens. Comumente, a madeira utilizada na produção das botas é aquela proveniente das laranjeiras. Há muitas variações dessa modalidade de dança. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/fandango.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -168,22 +179,32 @@ class _FandangoState extends State<Fandango> {
                         ),
                       );
                     },
-                    body: ListBody(children: [
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text(
-                          ' https://www.youtube.com/watch?v=yJiSokCVdT0\n' ,
-                          style: TextStyle(color: Colors.black)),
-                           onTap: () => _launchLink('https://www.youtube.com/watch?v=yJiSokCVdT0'),
-                      ),
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text(
-                          'https://www.youtube.com/watch?v=lYBmaDIlpNQ&list=RDEMaJI8x_Pnles7vFjUGBgXfg&start_radio=1\n',
-                          style: TextStyle(color: Colors.black)),
-                           onTap: () => _launchLink('https://www.youtube.com/watch?v=lYBmaDIlpNQ&list=RDEMaJI8x_Pnles7vFjUGBgXfg&start_radio=1'),
-                      ),
-                    ],),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              ' https://www.youtube.com/watch?v=yJiSokCVdT0\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=yJiSokCVdT0'),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=lYBmaDIlpNQ&list=RDEMaJI8x_Pnles7vFjUGBgXfg&start_radio=1\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=lYBmaDIlpNQ&list=RDEMaJI8x_Pnles7vFjUGBgXfg&start_radio=1'),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),
@@ -213,22 +234,32 @@ class _FandangoState extends State<Fandango> {
                         ),
                       );
                     },
-                    body: ListBody(children: [
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text(
-                          '  https://www.youtube.com/watch?v=7T2irPPoJTQ\n' ,
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=7T2irPPoJTQ'),
-                      ),
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text(
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              '  https://www.youtube.com/watch?v=7T2irPPoJTQ\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=7T2irPPoJTQ'),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
                               'https://www.youtube.com/watch?v=hElm_mwMkSM\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=hElm_mwMkSM'),
-                      ),
-                    ],),
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=hElm_mwMkSM'),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),

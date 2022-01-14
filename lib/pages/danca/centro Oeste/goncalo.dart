@@ -11,12 +11,10 @@ class Goncalo extends StatefulWidget {
 }
 
 class _GoncaloState extends State<Goncalo> {
-  Future<void> _launchLink  (String url) async{
-    
-       launch(url, forceSafariVC: false, forceWebView: false);
-
-    
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
   }
+
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -100,10 +98,23 @@ class _GoncaloState extends State<Goncalo> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          ' Dança religiosa de origem e aculturação portuguesa, inicialmente apresentada nos templos religiosos católicos, com o objetivo de catequizar os pecadores. Foi considerada de caráter mundano, sendo proibida pelas autoridades, passando a ser cantada e dançada nas zonas rurais, onde ainda hoje é aceita e praticada.Tem como personagens o Mestre, tocador de viola; o Contra-Mestre, tocador de meia-cuia ou meia cabaça, dois Guias que são sempre os segundos de cada cordão e os demais participantes dançadores, todos vestidos de brancos, com quepes e turbantes. Destina-se especialmente a pagar promessas à São Gonçalo, com uma coreografia em roda, bastante variada: tesoura, meia- volta, roda viva, rolo, cruz, prisão, etc. A música que acompanha os cantos e danças é o Baião de viola. A roda de São Gonçalo é iniciada com todos os participantes parados diante do altar, cantando louvações ao santo e em seguida começa o ritual, com um deles segurando a imagem de São Gonçalo. No final, os que estão pagando promessa vão para o centro da roda e os dançadores continuam a dançar, sempre batendo forte com um dos pés.  ',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'Dança religiosa de origem e aculturação portuguesa, inicialmente apresentada nos templos religiosos católicos, com o objetivo de catequizar os pecadores. Foi considerada de caráter mundano, sendo proibida pelas autoridades, passando a ser cantada e dançada nas zonas rurais, onde ainda hoje é aceita e praticada.Tem como personagens o Mestre, tocador de viola; o Contra-Mestre, tocador de meia-cuia ou meia cabaça, dois Guias que são sempre os segundos de cada cordão e os demais participantes dançadores, todos vestidos de brancos, com quepes e turbantes. Destina-se especialmente a pagar promessas à São Gonçalo, com uma coreografia em roda, bastante variada: tesoura, meia- volta, roda viva, rolo, cruz, prisão, etc. A música que acompanha os cantos e danças é o Baião de viola. A roda de São Gonçalo é iniciada com todos os participantes parados diante do altar, cantando louvações ao santo e em seguida começa o ritual, com um deles segurando a imagem de São Gonçalo. No final, os que estão pagando promessa vão para o centro da roda e os dançadores continuam a dançar, sempre batendo forte com um dos pés. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/saogon.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded1,
                     canTapOnHeader: true,
@@ -134,19 +145,24 @@ class _GoncaloState extends State<Goncalo> {
                         ),
                       );
                     },
-                    body: ListBody(children: [ ListTile(
-                      title: Text(
-                          'Roupas brancas com detalhes coloridos (fitas e acessórios) ',
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                     Image.asset("assets/images/saogon.jpeg",
-                        /*width: 370,
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'Roupas brancas com detalhes coloridos (fitas e acessórios) ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/saogon.jpg",
+                          /*width: 370,
                         height: 180,*/
-                      ),
-                      ListTile(
-                        title: Text('\n',
-                          style: TextStyle(color: Colors.black)),
-                      ),],),
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
                   ),
@@ -176,25 +192,32 @@ class _GoncaloState extends State<Goncalo> {
                         ),
                       );
                     },
-                    body:ListBody(
+                    body: ListBody(
                       children: [
                         ListTile(
-                          leading: Icon(Icons.link, color: Colors.blueAccent,),
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
                           title: Text(
-                          'https://www.youtube.com/watch?v=bH7buBX7ohw\n',
-                             
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink("https://www.youtube.com/watch?v=bH7buBX7ohw") ,
+                              'https://www.youtube.com/watch?v=bH7buBX7ohw\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=bH7buBX7ohw"),
                         ),
                         ListTile(
-                          leading: Icon(Icons.link, color: Colors.blueAccent,),
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
                           title: Text(
                               'https://www.youtube.com/watch?v=TPhBBkiU2OQ\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink("https://www.youtube.com/watch?v=TPhBBkiU2OQ") ,
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=TPhBBkiU2OQ"),
                         ),
                       ],
-                                          ),
+                    ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),

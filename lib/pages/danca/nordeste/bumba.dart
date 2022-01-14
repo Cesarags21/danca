@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/nordeste.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Bumba extends StatefulWidget {
   const Bumba({Key? key}) : super(key: key);
@@ -11,6 +12,10 @@ class Bumba extends StatefulWidget {
 
 class _BumbaState extends State<Bumba> {
   @override
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -127,10 +132,28 @@ class _BumbaState extends State<Bumba> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'Para o Bumba meu Boi, cada personagem da representação utiliza um tipo de roupa diferente. Pai Francisco veste com roupas simples de vaqueiro; Mãe Catirina é um homem vestido de mulher; Índias são mulheres com penas cobrindo peito, mãos e pernas; Vaqueiros usam roupas de veludo e chapéus com fitas coloridas e penas; Caboclo de fita e de pena se vestem com chapéus de fita coloridos e são cobertos por penas e um grande chapéu ou cocar feito de penas, respectivamente.',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'Para o Bumba meu Boi, cada personagem da representação utiliza um tipo de roupa diferente. Pai Francisco veste com roupas simples de vaqueiro; Mãe Catirina é um homem vestido de mulher; Índias são mulheres com penas cobrindo peito, mãos e pernas; Vaqueiros usam roupas de veludo e chapéus com fitas coloridas e penas; Caboclo de fita e de pena se vestem com chapéus de fita coloridos e são cobertos por penas e um grande chapéu ou cocar feito de penas, respectivamente.',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'Para o Bumba meu Boi, cada personagem da representação utiliza um tipo de roupa diferente. Pai Francisco veste com roupas simples de vaqueiro; Mãe Catirina é um homem vestido de mulher; Índias são mulheres com penas cobrindo peito, mãos e pernas; Vaqueiros usam roupas de veludo e chapéus com fitas coloridas e penas; Caboclo de fita e de pena se vestem com chapéus de fita coloridos e são cobertos por penas e um grande chapéu ou cocar feito de penas, respectivamente. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/bumba.png",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -161,11 +184,37 @@ class _BumbaState extends State<Bumba> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://www.letras.mus.br/jackson-do-pandeiro/1622356/\n' +
-                              'https://www.letras.mus.br/alcymar-monteiro/1728466/',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'https://www.letras.mus.br/jackson-do-pandeiro/1622356/\n' +
+                    //           'https://www.letras.mus.br/alcymar-monteiro/1728466/',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.letras.mus.br/jackson-do-pandeiro/1622356/\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.letras.mus.br/jackson-do-pandeiro/1622356/"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.letras.mus.br/alcymar-monteiro/1728466/\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.letras.mus.br/alcymar-monteiro/1728466/"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
@@ -196,11 +245,37 @@ class _BumbaState extends State<Bumba> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://www.youtube.com/watch?v=v43KL9Y0D7I\n' +
-                              'https://www.youtube.com/watch?v=adS2 GHdafTs',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'https://www.youtube.com/watch?v=v43KL9Y0D7I\n' +
+                    //           'https://www.youtube.com/watch?v=adS2 GHdafTs',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=v43KL9Y0D7I\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=v43KL9Y0D7I"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=adS2 GHdafTs\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=adS2 GHdafTs"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,

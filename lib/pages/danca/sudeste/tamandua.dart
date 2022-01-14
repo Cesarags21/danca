@@ -4,19 +4,17 @@ import 'package:regiao2/pages/home/sudeste.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Tamandua extends StatefulWidget {
-  const Tamandua({ Key? key }) : super(key: key);
+  const Tamandua({Key? key}) : super(key: key);
 
   @override
   _TamanduaState createState() => _TamanduaState();
 }
 
 class _TamanduaState extends State<Tamandua> {
-  Future<void> _launchLink  (String url) async{
-    
-       launch(url, forceSafariVC: false, forceWebView: false);
-
-    
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
   }
+
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -40,196 +38,212 @@ class _TamanduaState extends State<Tamandua> {
           ),
         ),
       ),
-
-      body: ListView(
-        children: [
-
-          _dancaFaixa(Sudeste()),
-
-          Divider(
-            height: 10,
-            thickness: 0.2,
-            color: Colors.white,
+      body: ListView(children: [
+        _dancaFaixa(Sudeste()),
+        Divider(
+          height: 10,
+          thickness: 0.2,
+          color: Colors.white,
+        ),
+        _regNome("Dança do Tamanduá"),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.accessibility_new_rounded),
+                      title: Text(
+                        'Conheça a dança',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  body: ListBody(
+                    children: [
+                      ListTile(
+                        title: Text(
+                            'Organizada em roda de homens e mulheres, um solista ao centro vai executando movimentos determinados pela letra da cantoria: pondo a mão na cabeça ou na cintura, batendo com o pé no chão, pulando para lá e para cá, mexendo com as cadeiras etc. As músicas são na forma solo-coro, o que permite improvisação nas ordens musicais cantadas pelo puxador.',
+                            style: TextStyle(color: Colors.black)),
+                      ),
+                      ListTile(
+                        title:
+                            Text('\n', style: TextStyle(color: Colors.black)),
+                      ),
+                    ],
+                  ),
+                  isExpanded: _expanded,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded = !_expanded;
+                setState(() {});
+              },
+            ),
           ),
-
-          _regNome("Dança do Tamanduá"),
-
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.accessibility_new_rounded),
-                        title: Text(
-                          'Conheça a dança',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("Organizada em roda de homens e mulheres, um solista ao centro vai executando movimentos determinados pela letra da cantoria: pondo a mão na cabeça ou na cintura, batendo com o pé no chão, pulando para lá e para cá, mexendo com as cadeiras etc. As músicas são na forma solo-coro, o que permite improvisação nas ordens musicais cantadas pelo puxador.",
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded,
-                    canTapOnHeader: true,
-                  ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded = !_expanded;
-                  setState(() {});
-                },
-              ),
-            ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.history_edu_rounded),
-                        title: Text(
-                          'História',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("Esta popular dança do Estado do Espírito Santo tem raízes afro, da região do Congo africano. ",                        style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded1,
-                    canTapOnHeader: true,
-                  ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded1 = !_expanded1;
-                  setState(() {});
-                },
-              ),
-            ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.crop_original_rounded),
-                        title: Text(
-                          'Vestimentas',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListTile(
-                      title: Text("Não encontrado :(",
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    isExpanded: _expanded2,
-                    canTapOnHeader: true,
-                  ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded2 = !_expanded2;
-                  setState(() {});
-                },
-              ),
-            ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.audiotrack_rounded),
-                        title: Text(
-                          'Músicas',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListBody(children: [
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text("https://www.youtube.com/watch?v=uJQ9hEZkx8Y\n",
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=uJQ9hEZkx8Y'),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.history_edu_rounded),
+                      title: Text(
+                        'História',
+                        style: TextStyle(color: Colors.black),
                       ),
-                    ],),
-                    isExpanded: _expanded3,
-                    canTapOnHeader: true,
+                    );
+                  },
+                  body: ListTile(
+                    title: Text(
+                        "Esta popular dança do Estado do Espírito Santo tem raízes afro, da região do Congo africano. ",
+                        style: TextStyle(color: Colors.black)),
                   ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded3 = !_expanded3;
-                  setState(() {});
-                },
-              ),
+                  isExpanded: _expanded1,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded1 = !_expanded1;
+                setState(() {});
+              },
             ),
-          ]),
-          Column(children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              color: Colors.green,
-              child: ExpansionPanelList(
-                animationDuration: Duration(milliseconds: 2000),
-                children: [
-                  ExpansionPanel(
-                    headerBuilder: (context, isExpanded) {
-                      return ListTile(
-                        leading: Icon(Icons.play_arrow_rounded),
-                        title: Text(
-                          'Aprenda a dançar',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    },
-                    body: ListBody(children: [
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text("https://www.youtube.com/watch?v=uJQ9hEZkx8Y\n",
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=uJQ9hEZkx8Y'),
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.crop_original_rounded),
+                      title: Text(
+                        'Vestimentas',
+                        style: TextStyle(color: Colors.black),
                       ),
-                    ],),
-                    isExpanded: _expanded4,
-                    canTapOnHeader: true,
+                    );
+                  },
+                  body: ListTile(
+                    title: Text("Não encontrado :(",
+                        style: TextStyle(color: Colors.black)),
                   ),
-                ],
-                dividerColor: Colors.grey,
-                expansionCallback: (panelIndex, isExpanded) {
-                  _expanded4 = !_expanded4;
-                  setState(() {});
-                },
-              ),
+                  isExpanded: _expanded2,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded2 = !_expanded2;
+                setState(() {});
+              },
             ),
-          ]),
-
-
-        ]
-      ),
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.audiotrack_rounded),
+                      title: Text(
+                        'Músicas',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  body: ListBody(
+                    children: [
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
+                        title: Text(
+                            "https://www.youtube.com/watch?v=uJQ9hEZkx8Y\n",
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            'https://www.youtube.com/watch?v=uJQ9hEZkx8Y'),
+                      ),
+                    ],
+                  ),
+                  isExpanded: _expanded3,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded3 = !_expanded3;
+                setState(() {});
+              },
+            ),
+          ),
+        ]),
+        Column(children: [
+          Container(
+            margin: EdgeInsets.all(10),
+            color: Colors.green,
+            child: ExpansionPanelList(
+              animationDuration: Duration(milliseconds: 2000),
+              children: [
+                ExpansionPanel(
+                  headerBuilder: (context, isExpanded) {
+                    return ListTile(
+                      leading: Icon(Icons.play_arrow_rounded),
+                      title: Text(
+                        'Aprenda a dançar',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    );
+                  },
+                  body: ListBody(
+                    children: [
+                      ListTile(
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
+                        title: Text(
+                            "https://www.youtube.com/watch?v=uJQ9hEZkx8Y\n",
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            'https://www.youtube.com/watch?v=uJQ9hEZkx8Y'),
+                      ),
+                    ],
+                  ),
+                  isExpanded: _expanded4,
+                  canTapOnHeader: true,
+                ),
+              ],
+              dividerColor: Colors.grey,
+              expansionCallback: (panelIndex, isExpanded) {
+                _expanded4 = !_expanded4;
+                setState(() {});
+              },
+            ),
+          ),
+        ]),
+      ]),
     );
   }
 
@@ -347,5 +361,4 @@ class _TamanduaState extends State<Tamandua> {
       ),
     ]);
   }
-
 }

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/centroOeste.dart';
@@ -9,18 +7,15 @@ import 'package:url_launcher/url_launcher.dart';
 class Boi extends StatefulWidget {
   const Boi({Key? key}) : super(key: key);
 
-  
   @override
   _BoiState createState() => _BoiState();
 }
 
 class _BoiState extends State<Boi> {
-  Future<void> _launchLink  (String url) async{
-    
-       launch(url, forceSafariVC: false, forceWebView: false);
-
-    
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
   }
+
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -53,7 +48,6 @@ class _BoiState extends State<Boi> {
             color: Colors.white,
           ),
           _regNome('Boi à Serra'),
-
 
           Column(children: [
             Container(
@@ -140,12 +134,13 @@ class _BoiState extends State<Boi> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'O boi, principal personagem, é feito da seguinte forma: primeiro monta-se uma estrutura de madeira leve e flexível conhecida como "melado de pomba"; depois, cobrem essa estrutura com um cobertor tipo "seca-poço", formando o corpo do boi, de cor semelhante à cor do animal; a cabeça do boi da brincadeira é a própria caveira do animal, seca, que é pintada com uma tinta escura, recebendo ainda algo para representar os olhos do boi, que pode ser dois botões, um de cada lado. Atualmente, algumas pessoas confeccionam o Boi-à-serra assemelhando-o ao Bumba-meu-boi de estados nordestinos do Brasil, cobrindo a mesma estrutura de madeira e a caveira do boi com tecido estampado. Uma pessoa vai dentro do boi, dançando ao carregá-lo, dando vida ao brinquedo, que avança em direção à platéia, como se fosse "chifrar" os presentes. Outros personagens, não menos interessantes, são: a cabeça de apá, a mãe do morro, o tuiuiú, a ema, o morcego, o cavalo sem cabeça; esses, são variáveis, de um a outro grupo. ', 
-                          style: TextStyle(color: Colors.black)),
-                    ),
-                    
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'O boi, principal personagem, é feito da seguinte forma: primeiro monta-se uma estrutura de madeira leve e flexível conhecida como "melado de pomba"; depois, cobrem essa estrutura com um cobertor tipo "seca-poço", formando o corpo do boi, de cor semelhante à cor do animal; a cabeça do boi da brincadeira é a própria caveira do animal, seca, que é pintada com uma tinta escura, recebendo ainda algo para representar os olhos do boi, que pode ser dois botões, um de cada lado. Atualmente, algumas pessoas confeccionam o Boi-à-serra assemelhando-o ao Bumba-meu-boi de estados nordestinos do Brasil, cobrindo a mesma estrutura de madeira e a caveira do boi com tecido estampado. Uma pessoa vai dentro do boi, dançando ao carregá-lo, dando vida ao brinquedo, que avança em direção à platéia, como se fosse "chifrar" os presentes. Outros personagens, não menos interessantes, são: a cabeça de apá, a mãe do morro, o tuiuiú, a ema, o morcego, o cavalo sem cabeça; esses, são variáveis, de um a outro grupo. ',
+                    //       style: TextStyle(color: Colors.black)),
+
+                    // ),
+
                     // Column(children: [
                     //   new Image.asset(
                     //     'images/boi.jpg',
@@ -154,9 +149,26 @@ class _BoiState extends State<Boi> {
                     //     fit: BoxFit.cover,
                     //   )
                     // ]),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'Dança religiosa de origem e aculturação portuguesa, inicialmente apresentada nos templos religiosos católicos, com o objetivo de catequizar os pecadores. Foi considerada de caráter mundano, sendo proibida pelas autoridades, passando a ser cantada e dançada nas zonas rurais, onde ainda hoje é aceita e praticada.Tem como personagens o Mestre, tocador de viola; o Contra-Mestre, tocador de meia-cuia ou meia cabaça, dois Guias que são sempre os segundos de cada cordão e os demais participantes dançadores, todos vestidos de brancos, com quepes e turbantes. Destina-se especialmente a pagar promessas à São Gonçalo, com uma coreografia em roda, bastante variada: tesoura, meia- volta, roda viva, rolo, cruz, prisão, etc. A música que acompanha os cantos e danças é o Baião de viola. A roda de São Gonçalo é iniciada com todos os participantes parados diante do altar, cantando louvações ao santo e em seguida começa o ritual, com um deles segurando a imagem de São Gonçalo. No final, os que estão pagando promessa vão para o centro da roda e os dançadores continuam a dançar, sempre batendo forte com um dos pés. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/boi.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
-          
                   ),
                 ],
                 dividerColor: Colors.grey,
@@ -189,10 +201,14 @@ class _BoiState extends State<Boi> {
                       );
                     },
                     body: ListTile(
-                      leading: Icon(Icons.link),
+                      leading: Icon(
+                        Icons.link,
+                        color: Colors.blueAccent,
+                      ),
                       title: Text('https://www.youtube.com/watch?v=07UTOrhONH0',
                           style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink("https://www.youtube.com/watch?v=07UTOrhONH0") ,
+                      onTap: () => _launchLink(
+                          "https://www.youtube.com/watch?v=07UTOrhONH0"),
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
@@ -224,9 +240,15 @@ class _BoiState extends State<Boi> {
                       );
                     },
                     body: ListTile(
-                      title: Text('https://www.youtube.com/watch?v=07UTOrhONH0',
-                          style: TextStyle(color: Colors.black)),
-                    ),
+                        leading: Icon(
+                          Icons.link,
+                          color: Colors.blueAccent,
+                        ),
+                        title: Text(
+                            'https://www.youtube.com/watch?v=07UTOrhONH0',
+                            style: TextStyle(color: Colors.black)),
+                        onTap: () => _launchLink(
+                            "https://www.youtube.com/watch?v=07UTOrhONH0")),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),
@@ -238,23 +260,6 @@ class _BoiState extends State<Boi> {
                 },
               ),
             ),
-          ]),
-          Column(children: [
-            new Image.asset(
-              'images/boi.jpg',
-              width: 200.0,
-              height: 50.0,
-              fit: BoxFit.cover,
-            )
-          ]),
-          Divider(),
-           Column(children: [
-            new Image.asset(
-              'images/logo.jpeg',
-              width: 50.0,
-              height: 50.0,
-              //fit: BoxFit.,
-            )
           ]),
         ],
       ),
@@ -373,6 +378,4 @@ class _BoiState extends State<Boi> {
       ),
     ]);
   }
-
-
 }

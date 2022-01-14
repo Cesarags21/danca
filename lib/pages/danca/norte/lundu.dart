@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/norte.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Lundu extends StatefulWidget {
   const Lundu({Key? key}) : super(key: key);
@@ -11,6 +12,10 @@ class Lundu extends StatefulWidget {
 
 class _LunduState extends State<Lundu> {
   @override
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -59,10 +64,18 @@ class _LunduState extends State<Lundu> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'Dança em pares, de movimentos ondulares, com forte atenção aos movimentos de quadril, valorizando sempre a sensualidade do casal. Pode ser dançada em roda e, para uma melhor apreciação, a possibilidade do uso de fogueiras dá um tom especial ao momento. O ritmo é cadenciado, lento e a dança, em casais, resgata o interesse primeiro do Lundu: o encontro sensual e sexual entre o homem e a mulher. Representa-se com a aproximação masculina, uma primeira negação feminina a esse interesse com sua posterior cessão ao desejo depois da grande insistência do parceiro. Ao final, os desejosos de amor saem juntos indicando o interesse primeiro, o encontro. ',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'Dança em pares, de movimentos ondulares, com forte atenção aos movimentos de quadril, valorizando sempre a sensualidade do casal. Pode ser dançada em roda e, para uma melhor apreciação, a possibilidade do uso de fogueiras dá um tom especial ao momento. O ritmo é cadenciado, lento e a dança, em casais, resgata o interesse primeiro do Lundu: o encontro sensual e sexual entre o homem e a mulher. Representa-se com a aproximação masculina, uma primeira negação feminina a esse interesse com sua posterior cessão ao desejo depois da grande insistência do parceiro. Ao final, os desejosos de amor saem juntos indicando o interesse primeiro, o encontro. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded,
                     canTapOnHeader: true,
@@ -127,10 +140,23 @@ class _LunduState extends State<Lundu> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'saias longas, coloridas e largas, blusas de renda curtas com os ombros e o abdômen à mostra, pulseiras, colares, brincos, para as mulheres. Para os homens, calças curtas, sem camisas ou com camisas brancas com desenhos marajoaras, além de muitos colares. Todos dançam descalços',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'Saias longas, coloridas e largas, blusas de renda curtas com os ombros e o abdômen à mostra, pulseiras, colares, brincos, para as mulheres. Para os homens, calças curtas, sem camisas ou com camisas brancas com desenhos marajoaras, além de muitos colares. Todos dançam descalços ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/lundu.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -161,11 +187,37 @@ class _LunduState extends State<Lundu> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          ' https://www.youtube.com/watch?v=JCPxHN-Ghwk' +
-                              'https://www.youtube.com/watch?v=s6weORTB6io',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       ' https://www.youtube.com/watch?v=JCPxHN-Ghwk' +
+                    //           'https://www.youtube.com/watch?v=s6weORTB6io',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=JCPxHN-Ghwk\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=JCPxHN-Ghwk"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=s6weORTB6io\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=s6weORTB6io"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
@@ -196,10 +248,31 @@ class _LunduState extends State<Lundu> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text('https://www.youtube.com/watch?v=JCPxHN-Ghwk' +
-                              'https://www.youtube.com/watch?v=s6weORTB6io',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=JCPxHN-Ghwk\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=JCPxHN-Ghwk"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=s6weORTB6io\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=s6weORTB6io"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,

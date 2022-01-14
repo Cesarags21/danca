@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/norte.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Camaleao extends StatefulWidget {
   const Camaleao({Key? key}) : super(key: key);
@@ -11,6 +12,10 @@ class Camaleao extends StatefulWidget {
 
 class _CamaleaoState extends State<Camaleao> {
   @override
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -59,10 +64,18 @@ class _CamaleaoState extends State<Camaleao> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'é dança de pares soltos que desenvolvem coreografia constituída por sete diferentes passos, chamados jornadas. Organizados em duas fileiras, homens e mulheres executam passos laterais de deslize, vênias entre os pares, palmas na mão do parceiro, troca de lugares, sapateados rítmicos, requebrados, palmeados das mulheres e dos homens entre si, terminando com o passo inicial. O conjunto musical é formado por viola, cavaquinho, rabeca e violão.',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'é dança de pares soltos que desenvolvem coreografia constituída por sete diferentes passos, chamados jornadas. Organizados em duas fileiras, homens e mulheres executam passos laterais de deslize, vênias entre os pares, palmas na mão do parceiro, troca de lugares, sapateados rítmicos, requebrados, palmeados das mulheres e dos homens entre si, terminando com o passo inicial. O conjunto musical é formado por viola, cavaquinho, rabeca e violão. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded,
                     canTapOnHeader: true,
@@ -126,10 +139,28 @@ class _CamaleaoState extends State<Camaleao> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'Indumentárias específicas inspiradas “no tempo do império”: os homens trajam fraque de abas, colete, culotes, meias brancas longas, sapato preto afivelado, gravata pomposa; as mulheres trajam saias longas rodadas, blusas soltas, meias brancas, sapatos afivelados.',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'Indumentárias específicas inspiradas “no tempo do império”: os homens trajam fraque de abas, colete, culotes, meias brancas longas, sapato preto afivelado, gravata pomposa; as mulheres trajam saias longas rodadas, blusas soltas, meias brancas, sapatos afivelados.',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'Indumentárias específicas inspiradas “no tempo do império”: os homens trajam fraque de abas, colete, culotes, meias brancas longas, sapato preto afivelado, gravata pomposa; as mulheres trajam saias longas rodadas, blusas soltas, meias brancas, sapatos afivelados. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/camaleao.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -160,11 +191,37 @@ class _CamaleaoState extends State<Camaleao> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://www.youtube.com/watch?v=NoI3lx_LkQU\n' +
-                              'https://www.youtube.com/watch?v=O58Mw0hVcRQ',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'https://www.youtube.com/watch?v=NoI3lx_LkQU\n' +
+                    //           'https://www.youtube.com/watch?v=O58Mw0hVcRQ',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=NoI3lx_LkQU\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=NoI3lx_LkQU"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=O58Mw0hVcRQ\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=O58Mw0hVcRQ"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
@@ -195,10 +252,37 @@ class _CamaleaoState extends State<Camaleao> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text('https://www.youtube.com/watch?v=NoI3lx_LkQU\n' +
-                              'https://www.youtube.com/watch?v=O58Mw0hVcRQ',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'https://www.youtube.com/watch?v=NoI3lx_LkQU\n' +
+                    //           'https://www.youtube.com/watch?v=O58Mw0hVcRQ',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=NoI3lx_LkQU\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=NoI3lx_LkQU"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=O58Mw0hVcRQ\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=O58Mw0hVcRQ"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,

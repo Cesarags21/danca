@@ -11,12 +11,10 @@ class Pezinho extends StatefulWidget {
 }
 
 class _PezinhoState extends State<Pezinho> {
-  Future<void> _launchLink  (String url) async{
-    
-       launch(url, forceSafariVC: false, forceWebView: false);
-
-    
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
   }
+
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -134,10 +132,28 @@ class _PezinhoState extends State<Pezinho> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'As mulheres usam vestidos compridos e rodados e os homens usam calças bombachas e botas. ',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'As mulheres usam vestidos compridos e rodados e os homens usam calças bombachas e botas. ',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'As mulheres usam vestidos compridos e rodados e os homens usam calças bombachas e botas. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/pezinho.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -168,14 +184,21 @@ class _PezinhoState extends State<Pezinho> {
                         ),
                       );
                     },
-                    body: ListBody(children: [
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text('https://www.youtube.com/watch?v=nixdhsZeIag\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=nixdhsZeIag'),
-                      ),
-                    ],),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=nixdhsZeIag\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=nixdhsZeIag'),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
                   ),
@@ -205,36 +228,54 @@ class _PezinhoState extends State<Pezinho> {
                         ),
                       );
                     },
-                    body: ListBody(children: [
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text(
-                          ' https://www.youtube.com/watch?v=EJg82ydow1Y\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=EJg82ydow1Y'),
-                      ),
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text(
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              ' https://www.youtube.com/watch?v=EJg82ydow1Y\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=EJg82ydow1Y'),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
                               'https://www.youtube.com/watch?v=Njq14EaG2q4\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=Njq14EaG2q4'),
-                      ),
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text(
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=Njq14EaG2q4'),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
                               'https://www.youtube.com/watch?v=HHH1cIl5gnI\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=HHH1cIl5gnI'),
-                      ),
-                      ListTile(
-                        leading: Icon(Icons.link, color: Colors.blueAccent,),
-                      title: Text(
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=HHH1cIl5gnI'),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
                               'https://www.youtube.com/watch?v=RdFSXdQ8LJc\n',
-                          style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink('https://www.youtube.com/watch?v=RdFSXdQ8LJc'),
-                      ),
-                    ],),
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              'https://www.youtube.com/watch?v=RdFSXdQ8LJc'),
+                        ),
+                      ],
+                    ),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),

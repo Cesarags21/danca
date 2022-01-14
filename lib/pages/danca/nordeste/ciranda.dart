@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/nordeste.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Ciranda extends StatefulWidget {
   const Ciranda({Key? key}) : super(key: key);
@@ -10,6 +11,10 @@ class Ciranda extends StatefulWidget {
 }
 
 class _CirandaState extends State<Ciranda> {
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   @override
   bool _expanded = false;
   bool _expanded1 = false;
@@ -127,10 +132,28 @@ class _CirandaState extends State<Ciranda> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          '(Femenino) saia compridas, panos coloridos, cabelos soltos ou, na praia, roupas mais curtas, em tons mais pastel. (Masculino) roupas do dia a dia.',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       '(Femenino) saia compridas, panos coloridos, cabelos soltos ou, na praia, roupas mais curtas, em tons mais pastel. (Masculino) roupas do dia a dia.',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              '(Femenino) saia compridas, panos coloridos, cabelos soltos ou, na praia, roupas mais curtas, em tons mais pastel. (Masculino) roupas do dia a dia. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/ciranda.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -161,11 +184,38 @@ class _CirandaState extends State<Ciranda> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://www.letras.mus.br/lia-de-itamaraca/399583/\n' +
+
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'https://www.letras.mus.br/lia-de-itamaraca/399583/\n' +
+                    //           'https://www.letras.mus.br/cantigas-populares/983988/',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.letras.mus.br/lia-de-itamaraca/399583/\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.letras.mus.br/lia-de-itamaraca/399583/\n"),
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
                               'https://www.letras.mus.br/cantigas-populares/983988/',
-                          style: TextStyle(color: Colors.black)),
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.letras.mus.br/cantigas-populares/983988/"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
@@ -196,10 +246,27 @@ class _CirandaState extends State<Ciranda> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text('https://www.youtube.com/watch?v=BvaJGnK3b_Y',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text('https://www.youtube.com/watch?v=BvaJGnK3b_Y',
+                    //       style: TextStyle(color: Colors.black)),
+
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://www.youtube.com/watch?v=BvaJGnK3b_Y\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://www.youtube.com/watch?v=BvaJGnK3b_Y"),
+                        ),
+                      ],
                     ),
+
                     isExpanded: _expanded4,
                     canTapOnHeader: true,
                   ),

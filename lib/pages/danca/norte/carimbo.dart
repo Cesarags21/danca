@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regiao2/core/app_colors.dart';
 import 'package:regiao2/pages/home/norte.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Carimbo extends StatefulWidget {
   const Carimbo({Key? key}) : super(key: key);
@@ -11,6 +12,10 @@ class Carimbo extends StatefulWidget {
 
 class _CarimboState extends State<Carimbo> {
   @override
+  Future<void> _launchLink(String url) async {
+    launch(url, forceSafariVC: false, forceWebView: false);
+  }
+
   bool _expanded = false;
   bool _expanded1 = false;
   bool _expanded2 = false;
@@ -59,10 +64,18 @@ class _CarimboState extends State<Carimbo> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'dança de roda formada por homens e mulheres, com solista no centro que baila com requebros, trejeitos, passos miúdos arrastados e ligeiros. O apogeu da apresentação é quando a dançarina, usando amplas saias, consegue cobrir algum dançador, volteando amplamente a veste. Este gesto provoca hilaridade entre todos. Caso jogue a saia e não cubra o parceiro, é imediatamente substituída. O nome da dança deriva de um dos instrumentos acompanhantes, um tambor de origem africana.',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'dança de roda formada por homens e mulheres, com solista no centro que baila com requebros, trejeitos, passos miúdos arrastados e ligeiros. O apogeu da apresentação é quando a dançarina, usando amplas saias, consegue cobrir algum dançador, volteando amplamente a veste. Este gesto provoca hilaridade entre todos. Caso jogue a saia e não cubra o parceiro, é imediatamente substituída. O nome da dança deriva de um dos instrumentos acompanhantes, um tambor de origem africana. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded,
                     canTapOnHeader: true,
@@ -127,10 +140,28 @@ class _CarimboState extends State<Carimbo> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'As mulheres usam bastante acessórios nos pulsos e pescoços, e a cabeça enfeitada por flores. As blusas possuem uma única cor e as saias são bem coloridas e volumosas, a fim de causar um movimento bonito durante a apresentação. Os homens dançam utilizando calças curtas, geralmente brancas, comumente com a bainha enrolada, costume herdado dos ancestrais negros, que devido às atividades exercidas dobravam a bainha de suas roupas.',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'As mulheres usam bastante acessórios nos pulsos e pescoços, e a cabeça enfeitada por flores. As blusas possuem uma única cor e as saias são bem coloridas e volumosas, a fim de causar um movimento bonito durante a apresentação. Os homens dançam utilizando calças curtas, geralmente brancas, comumente com a bainha enrolada, costume herdado dos ancestrais negros, que devido às atividades exercidas dobravam a bainha de suas roupas.',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          title: Text(
+                              'As mulheres usam bastante acessórios nos pulsos e pescoços, e a cabeça enfeitada por flores. As blusas possuem uma única cor e as saias são bem coloridas e volumosas, a fim de causar um movimento bonito durante a apresentação. Os homens dançam utilizando calças curtas, geralmente brancas, comumente com a bainha enrolada, costume herdado dos ancestrais negros, que devido às atividades exercidas dobravam a bainha de suas roupas. ',
+                              style: TextStyle(color: Colors.black)),
+                        ),
+                        Image.asset(
+                          "assets/images/carimbo.jpg",
+                          /*width: 370,
+                        height: 180,*/
+                        ),
+                        ListTile(
+                          title:
+                              Text('\n', style: TextStyle(color: Colors.black)),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded2,
                     canTapOnHeader: true,
@@ -161,10 +192,25 @@ class _CarimboState extends State<Carimbo> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text(
-                          'https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z',
-                          style: TextStyle(color: Colors.black)),
+                    // body: ListTile(
+                    //   title: Text(
+                    //       'https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z',
+                    //       style: TextStyle(color: Colors.black)),
+                    // ),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded3,
                     canTapOnHeader: true,
@@ -195,9 +241,20 @@ class _CarimboState extends State<Carimbo> {
                         ),
                       );
                     },
-                    body: ListTile(
-                      title: Text('https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z',
-                          style: TextStyle(color: Colors.black)),
+                    body: ListBody(
+                      children: [
+                        ListTile(
+                          leading: Icon(
+                            Icons.link,
+                            color: Colors.blueAccent,
+                          ),
+                          title: Text(
+                              'https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z\n',
+                              style: TextStyle(color: Colors.black)),
+                          onTap: () => _launchLink(
+                              "https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z"),
+                        ),
+                      ],
                     ),
                     isExpanded: _expanded4,
                     canTapOnHeader: true,

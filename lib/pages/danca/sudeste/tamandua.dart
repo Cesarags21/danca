@@ -179,8 +179,7 @@ class _TamanduaState extends State<Tamandua> {
                           Icons.link,
                           color: Colors.blueAccent,
                         ),
-                        title: Text(
-                            "https://www.youtube.com/watch?v=uJQ9hEZkx8Y\n",
+                        title: Text("Música - Dança do Tamanduá\n",
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             'https://www.youtube.com/watch?v=uJQ9hEZkx8Y'),
@@ -223,11 +222,8 @@ class _TamanduaState extends State<Tamandua> {
                           Icons.link,
                           color: Colors.blueAccent,
                         ),
-                        title: Text(
-                            "https://www.youtube.com/watch?v=uJQ9hEZkx8Y\n",
+                        title: Text("Não há :/\n",
                             style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            'https://www.youtube.com/watch?v=uJQ9hEZkx8Y'),
                       ),
                     ],
                   ),

@@ -200,7 +200,7 @@ class _GoncaloState extends State<Goncalo> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=bH7buBX7ohw\n',
+                              'Música - Ely Camargo - Cantiga de São Gonçalo\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=bH7buBX7ohw"),
@@ -210,8 +210,7 @@ class _GoncaloState extends State<Goncalo> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=TPhBBkiU2OQ\n',
+                          title: Text('Música - Adalto Santos - Devoção\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=TPhBBkiU2OQ"),

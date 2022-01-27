@@ -178,7 +178,7 @@ class _CocoState extends State<Coco> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.letras.mus.br/cheiro-de-amor/186962/\n',
+                              'Música - Dança do Coco - Cheiro de Amor\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.letras.mus.br/cheiro-de-amor/186962/"),
@@ -214,11 +214,6 @@ class _CocoState extends State<Coco> {
                         ),
                       );
                     },
-                    // body: ListTile(
-                    //   title: Text(
-                    //       'https://www.youtube.com/watch?v=cFH u9W nAo 68',
-                    //       style: TextStyle(color: Colors.black)),
-                    // ),
                     body: ListBody(
                       children: [
                         ListTile(
@@ -227,10 +222,10 @@ class _CocoState extends State<Coco> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=cFH u9W nAo 68\n',
+                              'Aprenda a dançar -Cultura popular: o ritmo e a dança do coco de roda\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=cFH u9W nAo 68"),
+                              "https://www.youtube.com/watch?v=cFHu9WnAo68"),
                         ),
                       ],
                     ),

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.cesar.regiao2">
    <application
-        android:label="regiao2"
+        android:label="Danças Típicas"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

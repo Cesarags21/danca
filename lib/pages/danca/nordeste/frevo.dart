@@ -193,18 +193,7 @@ class _FrevoState extends State<Frevo> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'http://www.aprendafrevo.com.br/?área=letras\n',
-                              style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              "http://www.aprendafrevo.com.br/?área=letras"),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.link,
-                            color: Colors.blueAccent,
-                          ),
-                          title: Text(
-                              'https://www.letras.mus.br/via-sat/509871/\n',
+                              'Música - Frevo Á queima roupa - Via Sat\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.letras.mus.br/via-sat/509871/"),
@@ -240,12 +229,6 @@ class _FrevoState extends State<Frevo> {
                         ),
                       );
                     },
-                    // body: ListTile(
-                    //   title: Text(
-                    //       'https://www.youtube.com/watch?v=lCQpq SRd-U\n' +
-                    //           'https://www.youtube.com/watch?v=yUzxN5yR8MI',
-                    //       style: TextStyle(color: Colors.black)),
-                    // ),
                     body: ListBody(
                       children: [
                         ListTile(
@@ -254,18 +237,7 @@ class _FrevoState extends State<Frevo> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=lCQpq SRd-U\n',
-                              style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=lCQpq SRd-U"),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.link,
-                            color: Colors.blueAccent,
-                          ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=yUzxN5yR8MI\n',
+                              'Aprenda a dançar - frevo para o Carnaval \n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=yUzxN5yR8MI"),

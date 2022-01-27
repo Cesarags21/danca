@@ -213,7 +213,7 @@ class _SiririState extends State<Siriri> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=P5jtd9n0xdg\n',
+                              'Música - Marrequinha da Lagoa - Siriri\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=P5jtd9n0xdg"),

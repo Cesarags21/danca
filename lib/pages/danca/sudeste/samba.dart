@@ -215,29 +215,7 @@ class _SambaState extends State<Samba> {
                           color: Colors.blueAccent,
                         ),
                         title: Text(
-                            'https://www.youtube.com/watch?v=4DZ00HB5ZV0\n',
-                            style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            "https://www.youtube.com/watch?v=4DZ00HB5ZV0"),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.link,
-                          color: Colors.blueAccent,
-                        ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=Tjh1wq24kTk\n',
-                            style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            "https://www.youtube.com/watch?v=Tjh1wq24kTk"),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.link,
-                          color: Colors.blueAccent,
-                        ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=4glVJKfs1Zg\n',
+                            'Música - O melhor do samba raiz anos 70 e 80\n',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=4glVJKfs1Zg"),
@@ -289,8 +267,7 @@ class _SambaState extends State<Samba> {
                           Icons.link,
                           color: Colors.blueAccent,
                         ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=4DZ00HB5ZV0\n',
+                        title: Text('Aprenda a dançar - Samba no pé Aula 1\n',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=4DZ00HB5ZV0"),
@@ -301,21 +278,10 @@ class _SambaState extends State<Samba> {
                           color: Colors.blueAccent,
                         ),
                         title: Text(
-                            'https://www.youtube.com/watch?v=Tjh1wq24kTk\n',
+                            'Aprenda a dançar - Como sambar passo a passo\n',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=Tjh1wq24kTk"),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.link,
-                          color: Colors.blueAccent,
-                        ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=4glVJKfs1Zg\n',
-                            style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            "https://www.youtube.com/watch?v=4glVJKfs1Zg"),
                       ),
                     ],
                   ),

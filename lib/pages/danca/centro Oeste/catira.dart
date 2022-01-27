@@ -187,7 +187,7 @@ class _CatiraState extends State<Catira> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=M70xRvuqZQY\n',
+                              'Música - Homenagem (Vieira e Vieirinha)\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=M70xRvuqZQY"),
@@ -197,8 +197,7 @@ class _CatiraState extends State<Catira> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=PE9YkPLu6KE\n',
+                          title: Text('Música - Chico Lobo - Catira\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=PE9YkPLu6KE"),
@@ -209,7 +208,7 @@ class _CatiraState extends State<Catira> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=VCfbsucnqEs\n',
+                              'Músico - Fernando Perillo - Meu Catira\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=VCfbsucnqEs"),
@@ -253,7 +252,7 @@ class _CatiraState extends State<Catira> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=RxwOnUYbrVc\n',
+                              'Aprenda a dançar - Oficina da Dança - Catira parte 1\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=RxwOnUYbrVc"),
@@ -264,7 +263,7 @@ class _CatiraState extends State<Catira> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=jKgLiqYi3b4\n',
+                              'Aprenda a dançar - Oficina da Dança - Catira parte 2\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=jKgLiqYi3b4"),
@@ -275,7 +274,7 @@ class _CatiraState extends State<Catira> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=rbxCK4sWxuQ\n',
+                              'Aprenda a dançar - Aula de danças brasileiras - Catira\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=rbxCK4sWxuQ"),

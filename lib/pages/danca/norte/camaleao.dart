@@ -204,22 +204,10 @@ class _CamaleaoState extends State<Camaleao> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=NoI3lx_LkQU\n',
+                          title: Text('Música - Dança do Camaleão\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=NoI3lx_LkQU"),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.link,
-                            color: Colors.blueAccent,
-                          ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=O58Mw0hVcRQ\n',
-                              style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=O58Mw0hVcRQ"),
                         ),
                       ],
                     ),
@@ -252,12 +240,6 @@ class _CamaleaoState extends State<Camaleao> {
                         ),
                       );
                     },
-                    // body: ListTile(
-                    //   title: Text(
-                    //       'https://www.youtube.com/watch?v=NoI3lx_LkQU\n' +
-                    //           'https://www.youtube.com/watch?v=O58Mw0hVcRQ',
-                    //       style: TextStyle(color: Colors.black)),
-                    // ),
                     body: ListBody(
                       children: [
                         ListTile(
@@ -266,18 +248,7 @@ class _CamaleaoState extends State<Camaleao> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=NoI3lx_LkQU\n',
-                              style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=NoI3lx_LkQU"),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.link,
-                            color: Colors.blueAccent,
-                          ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=O58Mw0hVcRQ\n',
+                              'Aprenda a dançar - Dança do Camaleão - Lar Fabiano de Cristo - Bayeux \n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=O58Mw0hVcRQ"),

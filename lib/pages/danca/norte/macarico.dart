@@ -210,22 +210,10 @@ class _MacaricoState extends State<Macarico> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=Ef-gFTsH8Gg\n',
+                          title: Text('Aprenda a dançar - Dança do Maçarico\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=Ef-gFTsH8Gg"),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.link,
-                            color: Colors.blueAccent,
-                          ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=yTV6UKnIZXs\n',
-                              style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=yTV6UKnIZXs"),
                         ),
                       ],
                     ),
@@ -265,22 +253,10 @@ class _MacaricoState extends State<Macarico> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=Ef-gFTsH8Gg\n',
+                          title: Text('Aprenda a dançar - Dança do Maçarico\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=Ef-gFTsH8Gg"),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.link,
-                            color: Colors.blueAccent,
-                          ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=yTV6UKnIZXs\n',
-                              style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=yTV6UKnIZXs"),
                         ),
                       ],
                     ),

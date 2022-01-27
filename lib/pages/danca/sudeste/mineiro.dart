@@ -200,21 +200,10 @@ class _MineiroState extends State<Mineiro> {
                           color: Colors.blueAccent,
                         ),
                         title: Text(
-                            'https://www.youtube.com/watch?v=ENhdjQHBeTI\n',
+                            'Música - Mostra de dança - No ritmo do Mineiro Pau\n',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=ENhdjQHBeTI"),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.link,
-                          color: Colors.blueAccent,
-                        ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=MzaZZ7rOM3E\n',
-                            style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            "https://www.youtube.com/watch?v=MzaZZ7rOM3E"),
                       ),
                     ],
                   ),
@@ -261,19 +250,7 @@ class _MineiroState extends State<Mineiro> {
                           Icons.link,
                           color: Colors.blueAccent,
                         ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=ENhdjQHBeTI\n',
-                            style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            "https://www.youtube.com/watch?v=ENhdjQHBeTI"),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.link,
-                          color: Colors.blueAccent,
-                        ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=MzaZZ7rOM3E\n',
+                        title: Text('Aprenda a dançar - Dança do Mineiro Pau\n',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=MzaZZ7rOM3E"),

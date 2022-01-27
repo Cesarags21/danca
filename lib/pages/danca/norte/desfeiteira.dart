@@ -107,7 +107,7 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                       );
                     },
                     body: ListTile(
-                      title: Text('origem portuguesa.',
+                      title: Text('Origem portuguesa.',
                           style: TextStyle(color: Colors.black)),
                     ),
                     isExpanded: _expanded1,
@@ -179,8 +179,7 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=xT-8qi0eiM8\n',
+                          title: Text('Música - Desfeiteira\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=xT-8qi0eiM8'),
@@ -224,10 +223,10 @@ class _DesfeiteiraState extends State<Desfeiteira> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=xT-8qi0eiM8\n',
+                              'Aprenda a dançar - Desfeiteira Matutagem\n',
                               style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              'https://www.youtube.com/watch?v=xT-8qi0eiM8'),
+                          onTap: () =>
+                              _launchLink('https://youtu.be/LMGAWLiKwtc'),
                         ),
                       ],
                     ),

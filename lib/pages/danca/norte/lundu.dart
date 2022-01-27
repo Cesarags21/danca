@@ -200,19 +200,7 @@ class _LunduState extends State<Lundu> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=JCPxHN-Ghwk\n',
-                              style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=JCPxHN-Ghwk"),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.link,
-                            color: Colors.blueAccent,
-                          ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=s6weORTB6io\n',
+                          title: Text('Música - Lundu na Baia do Guajará\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=s6weORTB6io"),
@@ -255,22 +243,10 @@ class _LunduState extends State<Lundu> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=JCPxHN-Ghwk\n',
+                          title: Text('Aprenda a dançar - Lundu Marajoara\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=JCPxHN-Ghwk"),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.link,
-                            color: Colors.blueAccent,
-                          ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=s6weORTB6io\n',
-                              style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=s6weORTB6io"),
                         ),
                       ],
                     ),

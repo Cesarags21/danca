@@ -191,8 +191,7 @@ class _VilaoState extends State<Vilao> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=45KLD3j6_GY\n',
+                          title: Text('Música - Dança do Vilão\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=45KLD3j6_GY"),

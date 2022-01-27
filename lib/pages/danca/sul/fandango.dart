@@ -186,8 +186,7 @@ class _FandangoState extends State<Fandango> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              ' https://www.youtube.com/watch?v=yJiSokCVdT0\n',
+                          title: Text('Música - Fandango no Paraná\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=yJiSokCVdT0'),
@@ -197,8 +196,7 @@ class _FandangoState extends State<Fandango> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=lYBmaDIlpNQ&list=RDEMaJI8x_Pnles7vFjUGBgXfg&start_radio=1\n',
+                          title: Text('Música - Os guapos\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=lYBmaDIlpNQ&list=RDEMaJI8x_Pnles7vFjUGBgXfg&start_radio=1'),
@@ -241,8 +239,7 @@ class _FandangoState extends State<Fandango> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              '  https://www.youtube.com/watch?v=7T2irPPoJTQ\n',
+                          title: Text('  Aprenda a dançar - Aula 1 Fandango\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=7T2irPPoJTQ'),
@@ -252,8 +249,7 @@ class _FandangoState extends State<Fandango> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=hElm_mwMkSM\n',
+                          title: Text('Aprenda a dançar - Xote laranjeira \n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=hElm_mwMkSM'),

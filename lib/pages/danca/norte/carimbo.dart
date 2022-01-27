@@ -204,8 +204,7 @@ class _CarimboState extends State<Carimbo> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z\n',
+                          title: Text('Playlist - Músicas de Carimbó\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z"),
@@ -248,11 +247,8 @@ class _CarimboState extends State<Carimbo> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z\n',
+                          title: Text('Não há :/\n',
                               style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              "https://youtube.com/playlist?list=PLsffXOa7IP6CY3RskDIsdOpLQFzFvGR0Z"),
                         ),
                       ],
                     ),

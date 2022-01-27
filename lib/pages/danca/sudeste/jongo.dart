@@ -190,8 +190,7 @@ class _JongoState extends State<Jongo> {
                           Icons.link,
                           color: Colors.blueAccent,
                         ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=OiujQ_T8nAs\n',
+                        title: Text('Música - Jongo da Serrinha\n',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=OiujQ_T8nAs"),
@@ -202,18 +201,7 @@ class _JongoState extends State<Jongo> {
                           color: Colors.blueAccent,
                         ),
                         title: Text(
-                            'https://www.youtube.com/watch?v=jpRhX7uHILQ\n',
-                            style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            "https://www.youtube.com/watch?v=jpRhX7uHILQ"),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.link,
-                          color: Colors.blueAccent,
-                        ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=QpXEkxO2xiI\n',
+                            'Música - Jongo da Serrinha - Axé di Langá\n',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=QpXEkxO2xiI"),
@@ -257,32 +245,10 @@ class _JongoState extends State<Jongo> {
                           color: Colors.blueAccent,
                         ),
                         title: Text(
-                            'https://www.youtube.com/watch?v=OiujQ_T8nAs\n',
-                            style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            "https://www.youtube.com/watch?v=OiujQ_T8nAs"),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.link,
-                          color: Colors.blueAccent,
-                        ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=jpRhX7uHILQ\n',
+                            'Aprenda a dançar - Jongo da Serrinha Rumo a Música\n',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=jpRhX7uHILQ"),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.link,
-                          color: Colors.blueAccent,
-                        ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=QpXEkxO2xiI\n',
-                            style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            "https://www.youtube.com/watch?v=QpXEkxO2xiI"),
                       ),
                     ],
                   ),

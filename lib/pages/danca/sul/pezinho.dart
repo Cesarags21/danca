@@ -191,8 +191,7 @@ class _PezinhoState extends State<Pezinho> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=nixdhsZeIag\n',
+                          title: Text('Música - Pezinho\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=nixdhsZeIag'),
@@ -235,8 +234,7 @@ class _PezinhoState extends State<Pezinho> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              ' https://www.youtube.com/watch?v=EJg82ydow1Y\n',
+                          title: Text(' Aprenda a dançar - Dança do pezinho\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=EJg82ydow1Y'),
@@ -247,7 +245,7 @@ class _PezinhoState extends State<Pezinho> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=Njq14EaG2q4\n',
+                              'Aprenda a dançar - Dança do pezinho - atividade de dança\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=Njq14EaG2q4'),
@@ -258,7 +256,7 @@ class _PezinhoState extends State<Pezinho> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=HHH1cIl5gnI\n',
+                              'Aprenda a dançar - video-aula dança do pezinho\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=HHH1cIl5gnI'),
@@ -269,7 +267,7 @@ class _PezinhoState extends State<Pezinho> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=RdFSXdQ8LJc\n',
+                              'Aprenda a dançar - Dança do pezinho - Dança Gaúcha\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=RdFSXdQ8LJc'),

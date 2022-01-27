@@ -200,8 +200,7 @@ class _QuadrilhaState extends State<Quadrilha> {
                           Icons.link,
                           color: Colors.blueAccent,
                         ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=Q45AKyWxuY8\n',
+                        title: Text('Música - Quadrilha Junina Clássica\n',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=Q45AKyWxuY8"),
@@ -212,7 +211,7 @@ class _QuadrilhaState extends State<Quadrilha> {
                           color: Colors.blueAccent,
                         ),
                         title: Text(
-                            'https://www.youtube.com/watch?v=Lfk-bF-PBZY\n',
+                            'Música - Seleção Festa Junina - Uma Hora de Músicas tradicionais\n',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=Lfk-bF-PBZY"),
@@ -256,21 +255,10 @@ class _QuadrilhaState extends State<Quadrilha> {
                           color: Colors.blueAccent,
                         ),
                         title: Text(
-                            'https://www.youtube.com/watch?v=Q45AKyWxuY8\n',
+                            'Aprenda a dançar - Como fazer quadrilha junina\n',
                             style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            "https://www.youtube.com/watch?v=Q45AKyWxuY8"),
-                      ),
-                      ListTile(
-                        leading: Icon(
-                          Icons.link,
-                          color: Colors.blueAccent,
-                        ),
-                        title: Text(
-                            'https://www.youtube.com/watch?v=Lfk-bF-PBZY\n',
-                            style: TextStyle(color: Colors.black)),
-                        onTap: () => _launchLink(
-                            "https://www.youtube.com/watch?v=Lfk-bF-PBZY"),
+                        onTap: () =>
+                            _launchLink("https://youtu.be/SerUR8tvpHk"),
                       ),
                     ],
                   ),

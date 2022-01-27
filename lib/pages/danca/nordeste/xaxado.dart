@@ -197,8 +197,7 @@ class _XaxadoState extends State<Xaxado> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.letras.mus.br/luiz-gonzaga/1563870/\n',
+                          title: Text('Música - Xaxado - Luiz Gonzaga\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.letras.mus.br/luiz-gonzaga/1563870/"),
@@ -209,7 +208,7 @@ class _XaxadoState extends State<Xaxado> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.letras.mus.br/trio-nordestino/1886459/\n',
+                              'Música - Xaxado no pé - Trio Nordestino\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.letras.mus.br/trio-nordestino/1886459/"),
@@ -245,12 +244,6 @@ class _XaxadoState extends State<Xaxado> {
                         ),
                       );
                     },
-                    // body: ListTile(
-                    //   title: Text(
-                    //       'https://www.youtube.com/watch?v=pSm-fO 299-o\n' +
-                    //           'https://www.youtube.com/watch?v=8V8ARN-WHd 4',
-                    //       style: TextStyle(color: Colors.black)),
-                    // ),
                     body: ListBody(
                       children: [
                         ListTile(
@@ -258,22 +251,20 @@ class _XaxadoState extends State<Xaxado> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=pSm-fO 299-o\n',
+                          title: Text('Aprenda a Dançar - Aulas de Xaxado\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=pSm-fO 299-o"),
+                              "https://www.youtube.com/watch?v=pSm-fO299-o"),
                         ),
                         ListTile(
                           leading: Icon(
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=8V8ARN-WHd 4\n',
+                          title: Text('Aprenda a Dançar - Aulas de Xaxado\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=8V8ARN-WHd 4"),
+                              "https://www.youtube.com/watch?v=8V8ARN-WHd4"),
                         ),
                       ],
                     ),

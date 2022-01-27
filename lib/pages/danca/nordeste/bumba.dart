@@ -198,7 +198,7 @@ class _BumbaState extends State<Bumba> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.letras.mus.br/jackson-do-pandeiro/1622356/\n',
+                              'Música - Bumba meu Boi - Jackson do Pandeiro\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.letras.mus.br/jackson-do-pandeiro/1622356/"),
@@ -209,7 +209,7 @@ class _BumbaState extends State<Bumba> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.letras.mus.br/alcymar-monteiro/1728466/\n',
+                              'Música - Bumba meu Boi Bumba - Alcymar Monteiro\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.letras.mus.br/alcymar-monteiro/1728466/"),
@@ -258,22 +258,10 @@ class _BumbaState extends State<Bumba> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=v43KL9Y0D7I\n',
+                          title: Text('Aprenda a dançar - O boi (Caprichoso)\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=v43KL9Y0D7I"),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.link,
-                            color: Colors.blueAccent,
-                          ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=adS2 GHdafTs\n',
-                              style: TextStyle(color: Colors.black)),
-                          onTap: () => _launchLink(
-                              "https://www.youtube.com/watch?v=adS2 GHdafTs"),
                         ),
                       ],
                     ),

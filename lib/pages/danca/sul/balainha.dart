@@ -186,8 +186,7 @@ class _BalainhaState extends State<Balainha> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              'https://www.youtube.com/watch?v=wXMjUgaxB4U\n',
+                          title: Text('Música - Balainha\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=wXMjUgaxB4U'),
@@ -231,7 +230,7 @@ class _BalainhaState extends State<Balainha> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              ' https://www.youtube.com/watch?v=hBejIvc7SLo\n',
+                              ' Aprenda a dançar - aula de arte: dança da balainha\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=hBejIvc7SLo'),

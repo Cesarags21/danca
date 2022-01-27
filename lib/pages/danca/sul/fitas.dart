@@ -191,8 +191,7 @@ class _FitasState extends State<Fitas> {
                             Icons.link,
                             color: Colors.blueAccent,
                           ),
-                          title: Text(
-                              ' https://www.youtube.com/watch?v=8QGgnbpYMIo\n',
+                          title: Text(' Música - Pau de Fitas\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               'https://www.youtube.com/watch?v=8QGgnbpYMIo'),

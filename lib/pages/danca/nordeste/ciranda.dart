@@ -199,7 +199,7 @@ class _CirandaState extends State<Ciranda> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.letras.mus.br/lia-de-itamaraca/399583/\n',
+                              'Música - Minha Ciranda - Lia de Itamarcá\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.letras.mus.br/lia-de-itamaraca/399583/\n"),
@@ -210,7 +210,7 @@ class _CirandaState extends State<Ciranda> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.letras.mus.br/cantigas-populares/983988/',
+                              'Música - Ciranda Cirandinha - Cantigas Populares Brasileiras',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.letras.mus.br/cantigas-populares/983988/"),
@@ -259,7 +259,7 @@ class _CirandaState extends State<Ciranda> {
                             color: Colors.blueAccent,
                           ),
                           title: Text(
-                              'https://www.youtube.com/watch?v=BvaJGnK3b_Y\n',
+                              'Aprenda a dançar - Como dançar Ciranda\n',
                               style: TextStyle(color: Colors.black)),
                           onTap: () => _launchLink(
                               "https://www.youtube.com/watch?v=BvaJGnK3b_Y"),

@@ -244,7 +244,7 @@ class _BoiState extends State<Boi> {
                           Icons.link,
                           color: Colors.blueAccent,
                         ),
-                        title: Text('Aprenda a dançar Boi Bumba!',
+                        title: Text('Aprenda a dançar Boi a Serra!',
                             style: TextStyle(color: Colors.black)),
                         onTap: () => _launchLink(
                             "https://www.youtube.com/watch?v=07UTOrhONH0")),
